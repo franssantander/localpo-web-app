@@ -1,0 +1,33 @@
+meta {
+  name: company-profile
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{localhost}}/user-registration/company-profile
+  body: multipartForm
+  auth: inherit
+}
+
+body:json {
+  {
+  "position": "HR",
+  "department": "Executive",
+  "phone_number": "0912345672",
+  "office_location": "BGC, Metro Manila",
+  "reports_to": ["John Doe", "Anna Smith"]
+  }
+}
+
+body:multipart-form {
+  company_profile: @file(C:\Users\santa_p5vbc9h\Downloads\img profile.jpg)
+  company_name: ABC Tech
+  industry_type: Information Technology
+  company_description: ABC Corp is a global leader in software solutions focusing on AI-driven innovation.
+  company_address: 123 Tech Avenue, Makati, Metro Manila
+  company_phone: 9354817636
+  company_email: contact@abcd.com
+  company_website: https://www.abc.com
+  year_establish: 2024
+}

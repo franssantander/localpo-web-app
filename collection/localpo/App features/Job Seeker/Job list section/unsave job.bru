@@ -1,0 +1,15 @@
+meta {
+  name: unsave job
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{localhost}}/app-jobseeker/unsave-job
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  id: 1
+}

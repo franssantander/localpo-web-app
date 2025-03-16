@@ -1,0 +1,14 @@
+Job Seeker:
+    UserRegistrationController:
+        1. user-profile:
+            ✔ add validator and input params (skills, experiences, description) @done(25-03-07 07:29)
+            ☐ add validator error message (profile pic, date of birth, address 1, regions, province, city/municipalities, barangay)
+        
+    JobSeekerController:
+        1. getAllJobs:
+            ☐ fix the return is_applied, it should based on user_id whose applied job.
+    
+
+Employer:
+    DashboardController:
+        1.

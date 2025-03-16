@@ -1,0 +1,11 @@
+meta {
+  name: get all jobs auth
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{localhost}}/app-jobseeker/get-all-jobs
+  body: multipartForm
+  auth: inherit
+}

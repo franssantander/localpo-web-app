@@ -1,0 +1,15 @@
+meta {
+  name: delete user
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{localhost}}/app-usersmanagement/delete-user
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  id: 6
+}

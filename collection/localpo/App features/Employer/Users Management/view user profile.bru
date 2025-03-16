@@ -1,0 +1,15 @@
+meta {
+  name: view user profile
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{localhost}}/app-usersmanagement/view-user?id=1
+  body: multipartForm
+  auth: inherit
+}
+
+params:query {
+  id: 1
+}

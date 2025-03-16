@@ -1,0 +1,29 @@
+meta {
+  name: edit job
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{localhost}}/app-dashboard/edit-job
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  title: Fullstack Software Engineer update
+  job_description: test job description
+  type[0]: Full-time
+  type[1]: On-Site
+  type[2]: Contract
+  location: BGC, Manila
+  salary_range: 35,000 - 50,000
+  experience_level: 2 Years Experience
+  job_function[0]: Software Development
+  industry[0]: Information
+  job_expiry: 13/01/2025
+  industry: Information Technology
+  background_img: @file(C:\Users\santa_p5vbc9h\Downloads\bgimage.jpg)
+  job_id: 1
+  industry[1]: Tech
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "employment_id": "Employment ID",
+    "profile_picture": "",
+    "name": "Full Name",
+    "department": "Department",
+    "role": "Role",
+    "status": "Status",
+    "created_at": "Date Registered",
+    "actions": ""
+  }
+]

@@ -1,0 +1,11 @@
+meta {
+  name: Auth view job
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{localhost}}/app-jobseeker/view-job/1
+  body: multipartForm
+  auth: inherit
+}

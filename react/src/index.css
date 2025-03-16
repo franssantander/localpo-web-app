@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply font-geist;
+  }
+}
+
+div#guestLayout,
+div#userLayout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #e4e4e7;
+}
+
+/* Drawer Component */
+section.mantine-Drawer-content {
+  overflow: hidden;
+}
+
+div.mantine-Drawer-body {
+  padding: 0;
+}
+
+.fc-list-day.fc-day.fc-day-sun.fc-day-today,
+td.fc-list-event-time,
+td.fc-list-event-title {
+  font-size: 0.8rem;
+}

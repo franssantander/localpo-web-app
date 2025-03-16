@@ -1,0 +1,15 @@
+meta {
+  name: resend-code
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{localhost}}/user-registration/resend-code
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgtdXNlci9sb2dpbiIsImlhdCI6MTczNjUxNzY3MiwiZXhwIjoxNzM2NTIxMjcyLCJuYmYiOjE3MzY1MTc2NzIsImp0aSI6Imw3MkVtYkNPeEFmTVFpN3kiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.DnAG7swZqlzboYyXIYKjeD0LNPNb2IYK7luF1gMB8rQ
+}

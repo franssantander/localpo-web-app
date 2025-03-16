@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Total Job Postings",
+    "icon": "mdi:briefcase-variant-outline",
+    "total": 8,
+    "description": "Active Posting"
+  },
+  {
+    "title": "Total Applications",
+    "icon": "mdi:file-document-box-multiple-outline",
+    "total": 329,
+    "description": "Applications"
+  },
+  {
+    "title": "Interview Scheduled",
+    "icon": "mdi:calendar-clock-outline",
+    "total": 4,
+    "description": "Upcoming Interviews"
+  },
+  {
+    "title": "Offers Made",
+    "icon": "mdi:handshake-outline",
+    "total": 1,
+    "description": "Offers Pending"
+  }
+]

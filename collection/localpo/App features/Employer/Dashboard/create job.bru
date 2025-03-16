@@ -1,0 +1,27 @@
+meta {
+  name: create job
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{localhost}}/app-dashboard/create-job
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  job_title: Fullstack Software Engineer 5
+  job_description: test job description
+  type[0]: Full-time
+  type[1]: On-Site
+  type[2]: Contract
+  location: BGC, Manila
+  salary_range: 35,000 - 50,000
+  experience_level: 2 Years Experience
+  job_function[0]: Software Development
+  industry: Information Technology
+  job_expiry: 06/01/2025
+  industry[0]: Information Technology
+  background_img: @file(C:\Users\santa_p5vbc9h\Downloads\bgimage.jpg)
+}

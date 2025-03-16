@@ -1,0 +1,15 @@
+meta {
+  name: close job
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{localhost}}/app-dashboard/close-job
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  id: 3
+}

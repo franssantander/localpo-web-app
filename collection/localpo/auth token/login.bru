@@ -1,0 +1,25 @@
+meta {
+  name: login
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{localhost}}/auth-user/login
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: 
+}
+
+body:multipart-form {
+  email: a@a.com
+  password: @Ver123123
+}
+
+script:post-response {
+  let data = res.getBody();
+  bru.setEnvVar("access_token",data.access_token);
+}

@@ -1,0 +1,5 @@
+Job Seeker:
+    JobSeekerController:
+        1. getAllJobs:
+            ☐ fix the return is_applied, it should based on user_id whose applied job.
+    

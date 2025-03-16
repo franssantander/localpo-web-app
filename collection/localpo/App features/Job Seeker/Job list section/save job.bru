@@ -1,0 +1,15 @@
+meta {
+  name: save job
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{localhost}}/app-jobseeker/save-job
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  id: 1
+}

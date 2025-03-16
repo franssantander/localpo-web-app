@@ -1,0 +1,16 @@
+meta {
+  name: login
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{localhost}}/api/auth-user/login
+  body: multipartForm
+  auth: none
+}
+
+body:multipart-form {
+  email: a1@a.com
+  password: qweasd123
+}

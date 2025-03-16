@@ -1,0 +1,15 @@
+meta {
+  name: sidebar
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{localhost}}/api/auth-user/sidebar
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgtdXNlci9sb2dpbiIsImlhdCI6MTczNDg2ODMxMiwiZXhwIjoxNzM0ODcxOTEyLCJuYmYiOjE3MzQ4NjgzMTIsImp0aSI6ImRGakFPd05Xd1N4THlERnYiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.lJ2q7ytWzDdpx0JGmrCnf75uotvxkDIEoF-uFhkzIsw
+}

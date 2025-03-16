@@ -1,0 +1,21 @@
+meta {
+  name: apply job
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{localhost}}/app-jobseeker/apply-job
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  posted_job_id: 2
+  resume: @file(C:\Users\Francis\Downloads\Testresume.docx)
+  cover_letter: @file(C:\Users\Francis\Downloads\test cover letter.docx)
+  contact_number: 9354345654
+  availability_time_1: 1:00 - 2:00 PM
+  availability_time_2: 8:00 - 9:00 AM
+  company_id: 1
+}

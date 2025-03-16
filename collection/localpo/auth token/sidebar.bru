@@ -1,0 +1,11 @@
+meta {
+  name: sidebar
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{localhost}}/auth-user/sidebar
+  body: multipartForm
+  auth: inherit
+}

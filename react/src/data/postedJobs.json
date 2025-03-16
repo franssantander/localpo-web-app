@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "img": "",
+    "job_title": "Junior Software Engineer",
+    "company": "Tech Innovations Ltd.",
+    "tags": ["Full-time", "6-8 experience", "80,000-100,000"],
+    "applications": 8,
+    "postedDate": "2 days ago",
+    "status": "Active"
+  },
+  {
+    "id": 2,
+    "img": "",
+    "job_title": "Junior Software Engineer",
+    "company": "Tech Innovations Ltd.",
+    "tags": ["Full-time", "6-8 experience", "80,000-100,000"],
+    "applications": 8,
+    "postedDate": "2 days ago",
+    "status": "Active"
+  },
+  {
+    "id": 3,
+    "img": "",
+    "job_title": "Junior Software Engineer",
+    "company": "Tech Innovations Ltd.",
+    "tags": ["Full-time", "6-8 experience", "80,000-100,000"],
+    "applications": 8,
+    "postedDate": "2 days ago",
+    "status": "Active"
+  },
+  {
+    "id": 4,
+    "img": "",
+    "job_title": "Junior Software Engineer",
+    "company": "Tech Innovations Ltd.",
+    "tags": ["Full-time", "6-8 experience", "80,000-100,000"],
+    "applications": 8,
+    "postedDate": "2 days ago",
+    "status": "Active"
+  },
+  {
+    "id": 5,
+    "img": "",
+    "job_title": "Junior Software Engineer",
+    "company": "Tech Innovations Ltd.",
+    "tags": ["Full-time", "6-8 experience", "80,000-100,000"],
+    "applications": 8,
+    "postedDate": "2 days ago",
+    "status": "Active"
+  }
+]

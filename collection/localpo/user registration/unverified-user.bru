@@ -1,0 +1,11 @@
+meta {
+  name: unverified-user
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{localhost}}/api/user-registration/unverified-user
+  body: multipartForm
+  auth: inherit
+}

@@ -1,0 +1,20 @@
+meta {
+  name: email-verification
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{localhost}}/user-registration/email-verification
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  verification_code: 105928
+}
+
+script:post-response {
+  let data = res.getBody();
+  bru.setEnvVar("access_token",data.access_token);
+}

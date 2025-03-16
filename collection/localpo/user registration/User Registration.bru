@@ -1,0 +1,24 @@
+meta {
+  name: User Registration
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{localhost}}/user-registration/register-user
+  body: multipartForm
+  auth: none
+}
+
+body:multipart-form {
+  phone_number: 9123456784
+  name: Joe Sassy
+  email: a@a.com
+  password: @Ver123123
+  password_confirmation: @Ver123123
+}
+
+script:post-response {
+  let data = res.getBody();
+  bru.setEnvVar("access_token",data.access_token);
+}

@@ -1,0 +1,807 @@
+[
+  {
+    "id": 1,
+    "img_profile": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "applicant_name": "Melendez Webster",
+    "job_applied": "Backend Developer",
+    "job_title": "Backend Developer",
+    "status": "Short Listed",
+    "hire_stage": "Shortlisted",
+    "experience_level": "Fresh Graduate",
+    "applicant_email": "melendezwebster@vitricomp.com",
+    "applicant_phone": "(932) 588-2538",
+    "description": "Voluptate incididunt aliquip ipsum voluptate adipisicing mollit dolore amet velit incididunt. Sit eu dolore laboris eiusmod aliquip excepteur ullamco ut duis velit. Culpa cillum est minim amet ea veniam qui do est fugiat nostrud.\r\nMagna fugiat aute eu do eiusmod ex labore et duis deserunt irure proident non. Lorem proident duis elit exercitation ut Lorem nisi sit cillum minim aliquip deserunt dolore. Amet sit commodo aliqua sint consectetur veniam ullamco incididunt culpa. Culpa ipsum excepteur aliquip dolor. Anim exercitation culpa minim excepteur sint non sit reprehenderit ipsum irure irure sit culpa ad. Aute id qui eiusmod minim sit cupidatat magna sint. Ea tempor velit dolor Lorem non excepteur voluptate.\r\n",
+    "interview_details": [
+      {
+        "title_head": "Interview Date",
+        "value": "September 25, 2024, at 2:00 PM"
+      },
+      {
+        "title_head": "Interview Type",
+        "value": "Microsoft Teams"
+      },
+      {
+        "title_head": "Interview Location",
+        "value": "ABC Corporation HQ, 1234 Main St, Suite 200"
+      },
+      {
+        "title_head": "Interview Status",
+        "value": "On Progress"
+      }
+    ],
+    "date_interview": "1-12-2024",
+    "start_time": "1:00 PM",
+    "interview_type": "Virtual - Google Meet",
+    "end_time": "2:00 PM",
+    "interview_status": "On Progress",
+    "assigned_interview": [
+      {
+        "img_profile": "https://images.pexels.com/photos/29409175/pexels-photo-29409175/free-photo-of-portrait-of-a-smiling-woman-with-glasses.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "name": "Kelly Williams"
+      },
+      {
+        "img_profile": "https://images.pexels.com/photos/29377996/pexels-photo-29377996/free-photo-of-confident-young-woman-in-professional-attire.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "name": "Anna Anderson"
+      }
+    ],
+    "shortlisted_details": [
+      {
+        "title_head": "Shortlisted Date",
+        "value": "September 30, 2024"
+      },
+      {
+        "title_head": "Shortlisted by",
+        "value": "HR - Kelly Williams"
+      }
+    ],
+    "shortlisted_status": "On Progress",
+    "assigned_review": [
+      {
+        "img_profile": "https://images.pexels.com/photos/29409175/pexels-photo-29409175/free-photo-of-portrait-of-a-smiling-woman-with-glasses.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "name": "Kelly Williams"
+      }
+    ],
+    "finalstage_details": [
+      {
+        "title_head": "Date Hired",
+        "value": "<SyntaxError: missing ) after argument list>"
+      },
+      {
+        "title_head": "Offer Accepted",
+        "value": "October 3, 2024"
+      }
+    ],
+    "finalstage_status": "Offer Accepted",
+    "notes": [
+      {
+        "img_profile": "https://images.pexels.com/photos/29409175/pexels-photo-29409175/free-photo-of-portrait-of-a-smiling-woman-with-glasses.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "name": "Kelly Williams",
+        "position": "HR",
+        "text": "Elit eu excepteur exercitation id elit id sint irure. Sint ipsum laboris Lorem amet. Ut sint nostrud irure ad eiusmod excepteur ea reprehenderit irure deserunt occaecat laboris consectetur. Ut ut cupidatat nulla reprehenderit sunt nisi in quis eiusmod incididunt enim ex dolore. Magna reprehenderit eu anim anim. Id veniam duis pariatur excepteur cupidatat mollit mollit qui labore pariatur amet.\r\nDolore magna enim aliqua laborum velit sunt quis voluptate proident nulla. Eu esse ipsum incididunt est proident elit qui amet non nulla laboris elit. Laborum voluptate eu laboris minim. Occaecat dolor pariatur deserunt commodo consectetur magna eu commodo deserunt Lorem qui excepteur deserunt. Ea reprehenderit dolore velit culpa id amet ex. Exercitation cillum cupidatat anim ullamco esse labore laborum ex commodo commodo sint quis enim fugiat. Laboris nulla magna aliqua Lorem dolore id est excepteur.\r\n"
+      }
+    ],
+    "work_experience": [
+      {
+        "job_title": "Backend Developer",
+        "company": "Netflix",
+        "years_experience": "November 2015 - October 2018"
+      },
+      {
+        "job_title": "Fullstack Developer",
+        "company": "Youtube",
+        "years_experience": "October 2020 - September 2019"
+      },
+      {
+        "job_title": "UI/UX Designer",
+        "company": "Youtube",
+        "years_experience": "June 2024 - December 2021"
+      }
+    ],
+    "skills": [
+      "Java",
+      "React JS",
+      "Cypress",
+      "React JS",
+      "TypeScript",
+      "Cypress",
+      "Cypress"
+    ],
+    "availability_date": "Oct. 25, Oct. 26, Oct. 27",
+    "availability_time": "8:00 AM - 5:00 PM",
+    "files": "",
+    "applied_job": "Fullstack Developer",
+    "date_applied": "September 4, 2022",
+    "date_posted": "2016-12-07",
+    "last_updated": "2017-10-14"
+  },
+  {
+    "id": 2,
+    "img_profile": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "applicant_name": "Alisa Bright",
+    "job_applied": "Backend Developer",
+    "job_title": "Backend Developer",
+    "status": "Short Listed",
+    "hire_stage": "Under Review",
+    "experience_level": "Fresh Graduate",
+    "applicant_email": "alisabright@vitricomp.com",
+    "applicant_phone": "(905) 561-3271",
+    "description": "Proident cillum magna duis cillum nostrud consequat adipisicing esse laboris cillum nisi minim. Nostrud irure duis dolor cillum mollit culpa non ad consectetur occaecat adipisicing minim minim non. Id proident quis excepteur nisi duis deserunt magna eiusmod sunt voluptate fugiat culpa et voluptate. Mollit cillum qui nisi laboris laboris veniam consequat mollit aliquip dolor esse nulla elit. Mollit fugiat pariatur minim commodo ipsum deserunt laborum reprehenderit. Non mollit et aliquip minim id ea nulla esse. Officia dolor Lorem id nisi.\r\nUllamco non excepteur dolor laboris laborum. Est mollit esse ex voluptate dolore tempor dolore labore. Dolor eiusmod pariatur sit et ad anim. Laboris nulla incididunt ex nisi excepteur quis cillum id magna ex aliquip fugiat. Sint culpa enim ut cillum dolore deserunt voluptate ad ipsum amet voluptate. Do Lorem esse officia sint aliqua aliquip occaecat reprehenderit dolore in eiusmod aliquip incididunt.\r\n",
+    "interview_details": [
+      {
+        "title_head": "Interview Date",
+        "value": "September 25, 2024, at 2:00 PM"
+      },
+      {
+        "title_head": "Interview Type",
+        "value": "Microsoft Teams"
+      },
+      {
+        "title_head": "Interview Location",
+        "value": "ABC Corporation HQ, 1234 Main St, Suite 200"
+      },
+      {
+        "title_head": "Interview Status",
+        "value": "Completed"
+      }
+    ],
+    "date_interview": "1-12-2024",
+    "start_time": "1:00 PM",
+    "interview_type": "Virtual - Google Meet",
+    "end_time": "2:00 PM",
+    "interview_status": "On Progress",
+    "assigned_interview": [
+      {
+        "img_profile": "https://images.pexels.com/photos/29409175/pexels-photo-29409175/free-photo-of-portrait-of-a-smiling-woman-with-glasses.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "name": "Kelly Williams"
+      },
+      {
+        "img_profile": "https://images.pexels.com/photos/29377996/pexels-photo-29377996/free-photo-of-confident-young-woman-in-professional-attire.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "name": "Anna Anderson"
+      }
+    ],
+    "shortlisted_details": [
+      {
+        "title_head": "Shortlisted Date",
+        "value": "September 30, 2024"
+      },
+      {
+        "title_head": "Shortlisted by",
+        "value": "HR - Anna Anderson"
+      }
+    ],
+    "shortlisted_status": "Completed",
+    "assigned_review": [
+      {
+        "img_profile": "https://images.pexels.com/photos/29409175/pexels-photo-29409175/free-photo-of-portrait-of-a-smiling-woman-with-glasses.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "name": "Kelly Williams"
+      }
+    ],
+    "finalstage_details": [
+      {
+        "title_head": "Date Hired",
+        "value": "<SyntaxError: missing ) after argument list>"
+      },
+      {
+        "title_head": "Offer Accepted",
+        "value": "October 3, 2024"
+      }
+    ],
+    "finalstage_status": "Pending Offer",
+    "notes": [
+      {
+        "img_profile": "https://images.pexels.com/photos/29409175/pexels-photo-29409175/free-photo-of-portrait-of-a-smiling-woman-with-glasses.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "name": "Kelly Williams",
+        "position": "HR",
+        "text": "Officia aliqua exercitation minim ex in qui consequat. Nisi eu reprehenderit eu excepteur magna et ullamco qui sint. Tempor dolore exercitation officia sit laborum id enim duis cupidatat minim laborum Lorem. Minim nulla aute sit dolore sint eiusmod sit proident in reprehenderit officia proident culpa. Incididunt nisi pariatur id dolor ad aliqua in occaecat voluptate enim aliqua culpa.\r\nVoluptate duis do magna magna. Officia cupidatat reprehenderit dolor tempor. In proident ipsum esse do aute ullamco excepteur nostrud pariatur. Ullamco do ex deserunt adipisicing amet dolore esse occaecat aute id. Pariatur consequat ipsum id ex magna sunt commodo id aliqua quis culpa non cillum deserunt. Et sunt culpa deserunt amet. Aliqua nostrud tempor labore dolor enim aute laboris aliqua.\r\n"
+      }
+    ],
+    "work_experience": [
+      {
+        "job_title": "UI/UX Designer",
+        "company": "Google",
+        "years_experience": "January 2022 - October 2023"
+      },
+      {
+        "job_title": "Backend Developer",
+        "company": "Netflix",
+        "years_experience": "December 2018 - December 2019"
+      },
+      {
+        "job_title": "Senior Software Engineer",
+        "company": "Amazon",
+        "years_experience": "July 2024 - January 2020"
+      }
+    ],
+    "skills": [
+      "Java",
+      "Cypress",
+      "TypeScript",
+      "TypeScript",
+      "TypeScript",
+      "TypeScript",
+      "Cypress"
+    ],
+    "availability_date": "Oct. 25, Oct. 26, Oct. 27",
+    "availability_time": "8:00 AM - 5:00 PM",
+    "files": "",
+    "applied_job": "Technical Support",
+    "date_applied": "December 28, 2016",
+    "date_posted": "2022-04-08",
+    "last_updated": "2017-02-22"
+  },
+  {
+    "id": 3,
+    "img_profile": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "applicant_name": "Cheryl Hughes",
+    "job_applied": "Technical Support",
+    "job_title": "UI/UX Designer",
+    "status": "Hired",
+    "hire_stage": "Under Review",
+    "experience_level": "5-10 Years",
+    "applicant_email": "cherylhughes@vitricomp.com",
+    "applicant_phone": "(821) 493-2155",
+    "description": "Exercitation laboris mollit commodo ad Lorem voluptate ullamco exercitation tempor veniam nulla qui consectetur ullamco. Minim culpa enim mollit voluptate qui sint proident enim cillum sit voluptate ut. Elit laboris anim ad laborum laborum. Deserunt elit exercitation laborum sunt ad nulla. Cillum ea dolore consequat qui nisi excepteur duis enim dolor non adipisicing esse cillum.\r\nMinim incididunt labore aute ex ex dolore consectetur occaecat. Voluptate et incididunt culpa tempor ut aute ipsum tempor tempor ad culpa eiusmod. Sit sunt eiusmod excepteur nisi ut veniam mollit sit ullamco dolore. Est consectetur duis est excepteur incididunt non nisi enim occaecat.\r\n",
+    "interview_details": [
+      {
+        "title_head": "Interview Date",
+        "value": "September 25, 2024, at 2:00 PM"
+      },
+      {
+        "title_head": "Interview Type",
+        "value": "In-Person"
+      },
+      {
+        "title_head": "Interview Location",
+        "value": "ABC Corporation HQ, 1234 Main St, Suite 200"
+      },
+      {
+        "title_head": "Interview Status",
+        "value": "Completed"
+      }
+    ],
+    "date_interview": "1-12-2024",
+    "start_time": "1:00 PM",
+    "interview_type": "Virtual - Google Meet",
+    "end_time": "2:00 PM",
+    "interview_status": "On Progress",
+    "assigned_interview": [
+      {
+        "img_profile": "https://images.pexels.com/photos/29409175/pexels-photo-29409175/free-photo-of-portrait-of-a-smiling-woman-with-glasses.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "name": "Kelly Williams"
+      },
+      {
+        "img_profile": "https://images.pexels.com/photos/29377996/pexels-photo-29377996/free-photo-of-confident-young-woman-in-professional-attire.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "name": "Anna Anderson"
+      }
+    ],
+    "shortlisted_details": [
+      {
+        "title_head": "Shortlisted Date",
+        "value": "September 30, 2024"
+      },
+      {
+        "title_head": "Shortlisted by",
+        "value": "HR - Anna Anderson"
+      }
+    ],
+    "shortlisted_status": "Completed",
+    "assigned_review": [
+      {
+        "img_profile": "https://images.pexels.com/photos/29409175/pexels-photo-29409175/free-photo-of-portrait-of-a-smiling-woman-with-glasses.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "name": "Kelly Williams"
+      }
+    ],
+    "finalstage_details": [
+      {
+        "title_head": "Date Hired",
+        "value": "<SyntaxError: missing ) after argument list>"
+      },
+      {
+        "title_head": "Offer Accepted",
+        "value": "October 3, 2024"
+      }
+    ],
+    "finalstage_status": "Offer Accepted",
+    "notes": [
+      {
+        "img_profile": "https://images.pexels.com/photos/29409175/pexels-photo-29409175/free-photo-of-portrait-of-a-smiling-woman-with-glasses.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "name": "Kelly Williams",
+        "position": "HR",
+        "text": "Quis elit cillum adipisicing occaecat nostrud sint laboris officia do non. Veniam dolor veniam fugiat reprehenderit laborum nisi tempor culpa officia elit non officia eiusmod. Cillum irure et mollit proident aliqua tempor sit labore eiusmod Lorem dolore ex deserunt. Enim voluptate anim veniam officia. Est sint aliquip labore minim dolore tempor. Ipsum irure Lorem dolore Lorem irure sint nisi in velit occaecat tempor.\r\nReprehenderit cupidatat officia ad labore officia ad veniam et velit commodo sit. Enim ea est Lorem consequat consequat consequat deserunt. Anim officia officia aute esse. Nostrud esse anim esse consectetur dolor dolor adipisicing proident ipsum do incididunt dolor ipsum velit. Incididunt magna sint aliqua est ea commodo anim nisi cillum fugiat cupidatat magna aute.\r\n"
+      }
+    ],
+    "work_experience": [
+      {
+        "job_title": "Junior Software Engineer",
+        "company": "Netflix",
+        "years_experience": "January 2018 - August 2024"
+      },
+      {
+        "job_title": "Frontned Developer",
+        "company": "Facebook",
+        "years_experience": "September 2017 - March 2016"
+      },
+      {
+        "job_title": "Senior Software Engineer",
+        "company": "Netflix",
+        "years_experience": "August 2018 - March 2024"
+      }
+    ],
+    "skills": [
+      "Java",
+      "Laravel",
+      "React JS",
+      "TypeScript",
+      "TypeScript",
+      "Laravel",
+      "Java"
+    ],
+    "availability_date": "Oct. 25, Oct. 26, Oct. 27",
+    "availability_time": "8:00 AM - 5:00 PM",
+    "files": "",
+    "applied_job": "Senior Software Engineer",
+    "date_applied": "August 11, 2015",
+    "date_posted": "2024-06-03",
+    "last_updated": "2022-09-10"
+  },
+  {
+    "id": 4,
+    "img_profile": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "applicant_name": "Rogers Walsh",
+    "job_applied": "Junior Software Engineer",
+    "job_title": "Junior Software Engineer",
+    "status": "Pending Offer",
+    "hire_stage": "Hired/Declined",
+    "experience_level": "3-5 Years",
+    "applicant_email": "rogerswalsh@vitricomp.com",
+    "applicant_phone": "(881) 410-2062",
+    "description": "Laborum ad sit exercitation incididunt consequat excepteur enim. Reprehenderit tempor Lorem ex in deserunt cillum ad aliqua et reprehenderit ut aliquip ex proident. Proident laborum elit reprehenderit anim occaecat do sint nulla. Et aute minim ipsum sint enim est labore cillum tempor dolor in. Laboris incididunt enim ex consectetur ut cupidatat eu voluptate laborum ipsum minim nulla. Culpa adipisicing sunt amet sunt enim elit ipsum exercitation sunt laboris occaecat nostrud culpa non.\r\nIrure labore velit amet deserunt incididunt. Qui esse sint ipsum deserunt consectetur ad Lorem fugiat. Lorem nostrud dolore ea culpa tempor. Minim mollit in non anim aute sint esse dolore velit tempor deserunt velit consequat minim. Veniam laborum ex reprehenderit quis et magna exercitation dolore ex ad. Cillum irure pariatur tempor magna labore id nostrud enim sit.\r\n",
+    "interview_details": [
+      {
+        "title_head": "Interview Date",
+        "value": "September 25, 2024, at 2:00 PM"
+      },
+      {
+        "title_head": "Interview Type",
+        "value": "Microsoft Teams"
+      },
+      {
+        "title_head": "Interview Location",
+        "value": "ABC Corporation HQ, 1234 Main St, Suite 200"
+      },
+      {
+        "title_head": "Interview Status",
+        "value": "On Progress"
+      }
+    ],
+    "date_interview": "1-12-2024",
+    "start_time": "1:00 PM",
+    "interview_type": "Virtual - Google Meet",
+    "end_time": "2:00 PM",
+    "interview_status": "Completed",
+    "assigned_interview": [
+      {
+        "img_profile": "https://images.pexels.com/photos/29409175/pexels-photo-29409175/free-photo-of-portrait-of-a-smiling-woman-with-glasses.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "name": "Kelly Williams"
+      },
+      {
+        "img_profile": "https://images.pexels.com/photos/29377996/pexels-photo-29377996/free-photo-of-confident-young-woman-in-professional-attire.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "name": "Anna Anderson"
+      }
+    ],
+    "shortlisted_details": [
+      {
+        "title_head": "Shortlisted Date",
+        "value": "September 30, 2024"
+      },
+      {
+        "title_head": "Shortlisted by",
+        "value": "HR - Anna Anderson"
+      }
+    ],
+    "shortlisted_status": "On Progress",
+    "assigned_review": [
+      {
+        "img_profile": "https://images.pexels.com/photos/29409175/pexels-photo-29409175/free-photo-of-portrait-of-a-smiling-woman-with-glasses.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "name": "Kelly Williams"
+      }
+    ],
+    "finalstage_details": [
+      {
+        "title_head": "Date Hired",
+        "value": "<SyntaxError: missing ) after argument list>"
+      },
+      {
+        "title_head": "Offer Accepted",
+        "value": "October 3, 2024"
+      }
+    ],
+    "finalstage_status": "Pending Offer",
+    "notes": [
+      {
+        "img_profile": "https://images.pexels.com/photos/29409175/pexels-photo-29409175/free-photo-of-portrait-of-a-smiling-woman-with-glasses.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "name": "Kelly Williams",
+        "position": "HR",
+        "text": "Ea mollit aliqua voluptate aute. Commodo dolor labore Lorem cillum fugiat anim eiusmod ad tempor dolor pariatur proident. Mollit consequat enim quis labore ullamco magna tempor nisi consectetur do. Dolor proident labore in culpa sunt pariatur sunt occaecat aute. Amet ex sunt eu aliquip ullamco consectetur velit velit in.\r\nFugiat adipisicing aliqua do cupidatat. Anim ipsum velit qui qui ad ipsum cillum est commodo id esse in aute ex. Eu magna aute ullamco tempor exercitation dolor mollit veniam et ut aliquip proident. Aliqua minim Lorem dolor culpa amet consequat nisi deserunt incididunt quis exercitation consequat. Veniam consectetur enim sint Lorem commodo aute occaecat nostrud sit ipsum officia fugiat. Elit exercitation enim consectetur est minim consequat voluptate ipsum Lorem. Enim id ex excepteur elit nisi elit amet dolore ex irure.\r\n"
+      }
+    ],
+    "work_experience": [
+      {
+        "job_title": "Project Manager",
+        "company": "Netflix",
+        "years_experience": "December 2023 - April 2023"
+      },
+      {
+        "job_title": "Technical Support",
+        "company": "Google",
+        "years_experience": "August 2017 - March 2019"
+      },
+      {
+        "job_title": "Frontned Developer",
+        "company": "Microsoft",
+        "years_experience": "May 2022 - March 2014"
+      }
+    ],
+    "skills": [
+      "TypeScript",
+      "Laravel",
+      "Cypress",
+      "Laravel",
+      "Cypress",
+      "React JS",
+      "TypeScript"
+    ],
+    "availability_date": "Oct. 25, Oct. 26, Oct. 27",
+    "availability_time": "8:00 AM - 5:00 PM",
+    "files": "",
+    "applied_job": "Junior Software Engineer",
+    "date_applied": "February 8, 2023",
+    "date_posted": "2014-09-16",
+    "last_updated": "2024-02-08"
+  },
+  {
+    "id": 5,
+    "img_profile": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "applicant_name": "Goff Kerr",
+    "job_applied": "Project Manager",
+    "job_title": "Backend Developer",
+    "status": "Pending Offer",
+    "hire_stage": "Under Review",
+    "experience_level": "Fresh Graduate",
+    "applicant_email": "goffkerr@vitricomp.com",
+    "applicant_phone": "(939) 519-3468",
+    "description": "Lorem dolor id ipsum labore aute nostrud pariatur nisi consequat aliquip exercitation dolore. Labore ea et anim id. Aliqua aliqua adipisicing consequat elit velit minim. Cupidatat deserunt consequat esse irure aute anim reprehenderit id ipsum nulla tempor dolore non.\r\nEu Lorem minim cupidatat consequat eu ex id mollit eu ea. Occaecat officia dolore consectetur elit voluptate aute excepteur. Duis occaecat aute et labore ullamco nulla exercitation exercitation non incididunt incididunt. Consequat anim amet consectetur ex nisi do voluptate consequat dolore commodo qui pariatur. Ea amet cillum incididunt ea labore id est non ea qui dolore Lorem laboris.\r\n",
+    "interview_details": [
+      {
+        "title_head": "Interview Date",
+        "value": "September 25, 2024, at 2:00 PM"
+      },
+      {
+        "title_head": "Interview Type",
+        "value": "In-Person"
+      },
+      {
+        "title_head": "Interview Location",
+        "value": "ABC Corporation HQ, 1234 Main St, Suite 200"
+      },
+      {
+        "title_head": "Interview Status",
+        "value": "Completed"
+      }
+    ],
+    "date_interview": "1-12-2024",
+    "start_time": "1:00 PM",
+    "interview_type": "Virtual - Google Meet",
+    "end_time": "2:00 PM",
+    "interview_status": "Completed",
+    "assigned_interview": [
+      {
+        "img_profile": "https://images.pexels.com/photos/29409175/pexels-photo-29409175/free-photo-of-portrait-of-a-smiling-woman-with-glasses.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "name": "Kelly Williams"
+      },
+      {
+        "img_profile": "https://images.pexels.com/photos/29377996/pexels-photo-29377996/free-photo-of-confident-young-woman-in-professional-attire.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "name": "Anna Anderson"
+      }
+    ],
+    "shortlisted_details": [
+      {
+        "title_head": "Shortlisted Date",
+        "value": "September 30, 2024"
+      },
+      {
+        "title_head": "Shortlisted by",
+        "value": "HR - Anna Anderson"
+      }
+    ],
+    "shortlisted_status": "Completed",
+    "assigned_review": [
+      {
+        "img_profile": "https://images.pexels.com/photos/29409175/pexels-photo-29409175/free-photo-of-portrait-of-a-smiling-woman-with-glasses.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "name": "Kelly Williams"
+      }
+    ],
+    "finalstage_details": [
+      {
+        "title_head": "Date Hired",
+        "value": "<SyntaxError: missing ) after argument list>"
+      },
+      {
+        "title_head": "Offer Accepted",
+        "value": "October 3, 2024"
+      }
+    ],
+    "finalstage_status": "Offer Declined",
+    "notes": [
+      {
+        "img_profile": "https://images.pexels.com/photos/29409175/pexels-photo-29409175/free-photo-of-portrait-of-a-smiling-woman-with-glasses.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "name": "Kelly Williams",
+        "position": "HR",
+        "text": "Proident do ex minim deserunt ullamco esse magna cupidatat reprehenderit. Minim nisi dolore velit dolore nulla deserunt occaecat reprehenderit ullamco id mollit velit ipsum. Reprehenderit proident irure qui esse. Lorem eiusmod elit sit fugiat cupidatat enim officia adipisicing. Nulla incididunt cupidatat ex nulla est cupidatat cupidatat.\r\nPariatur culpa et sint voluptate consequat aliquip et amet Lorem excepteur. Veniam nulla nulla fugiat ipsum aliqua. Id deserunt consequat proident culpa ullamco consectetur ipsum labore dolor esse laboris incididunt. Sint excepteur non commodo sit fugiat exercitation sunt dolore nostrud dolor sit laborum sint. Minim reprehenderit est eiusmod qui enim ut in est exercitation aute minim velit ex cupidatat.\r\n"
+      }
+    ],
+    "work_experience": [
+      {
+        "job_title": "UI/UX Designer",
+        "company": "Amazon",
+        "years_experience": "August 2017 - September 2018"
+      },
+      {
+        "job_title": "UI/UX Designer",
+        "company": "Youtube",
+        "years_experience": "September 2018 - May 2019"
+      },
+      {
+        "job_title": "Frontned Developer",
+        "company": "Google",
+        "years_experience": "July 2019 - April 2019"
+      }
+    ],
+    "skills": [
+      "TypeScript",
+      "React JS",
+      "C#",
+      "TypeScript",
+      "Cypress",
+      "React JS",
+      "Java"
+    ],
+    "availability_date": "Oct. 25, Oct. 26, Oct. 27",
+    "availability_time": "8:00 AM - 5:00 PM",
+    "files": "",
+    "applied_job": "Project Manager",
+    "date_applied": "March 24, 2017",
+    "date_posted": "2016-03-10",
+    "last_updated": "2016-04-10"
+  },
+  {
+    "id": 6,
+    "img_profile": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "applicant_name": "Mattie Wood",
+    "job_applied": "Senior Software Engineer",
+    "job_title": "Frontned Developer",
+    "status": "Short Listed",
+    "hire_stage": "Under Review",
+    "experience_level": "3-5 Years",
+    "applicant_email": "mattiewood@vitricomp.com",
+    "applicant_phone": "(848) 503-3224",
+    "description": "Ut nulla ad Lorem ea sint sint. Duis dolor veniam dolor est tempor consequat ullamco consequat anim. Pariatur in deserunt officia ex dolor quis reprehenderit labore magna mollit magna qui non nisi. Velit aute ad elit commodo labore est consectetur pariatur labore pariatur. Elit cupidatat esse quis sit.\r\nEsse occaecat mollit aliquip do est et. Enim ut quis consectetur sit deserunt culpa aliquip cillum consequat sunt laborum adipisicing dolore. Anim exercitation velit ea deserunt eu dolore ut magna ut nisi aute minim. Tempor anim deserunt laboris magna Lorem qui nostrud non sit Lorem mollit sit exercitation. Ut enim eu enim reprehenderit ullamco eiusmod ad ipsum officia in ea. Pariatur veniam eu laboris deserunt anim veniam mollit pariatur aliquip labore quis non.\r\n",
+    "interview_details": [
+      {
+        "title_head": "Interview Date",
+        "value": "September 25, 2024, at 2:00 PM"
+      },
+      {
+        "title_head": "Interview Type",
+        "value": "Microsoft Teams"
+      },
+      {
+        "title_head": "Interview Location",
+        "value": "ABC Corporation HQ, 1234 Main St, Suite 200"
+      },
+      {
+        "title_head": "Interview Status",
+        "value": "Completed"
+      }
+    ],
+    "date_interview": "1-12-2024",
+    "start_time": "1:00 PM",
+    "interview_type": "Virtual - Google Meet",
+    "end_time": "2:00 PM",
+    "interview_status": "On Progress",
+    "assigned_interview": [
+      {
+        "img_profile": "https://images.pexels.com/photos/29409175/pexels-photo-29409175/free-photo-of-portrait-of-a-smiling-woman-with-glasses.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "name": "Kelly Williams"
+      },
+      {
+        "img_profile": "https://images.pexels.com/photos/29377996/pexels-photo-29377996/free-photo-of-confident-young-woman-in-professional-attire.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "name": "Anna Anderson"
+      }
+    ],
+    "shortlisted_details": [
+      {
+        "title_head": "Shortlisted Date",
+        "value": "September 30, 2024"
+      },
+      {
+        "title_head": "Shortlisted by",
+        "value": "HR - Anna Anderson"
+      }
+    ],
+    "shortlisted_status": "Completed",
+    "assigned_review": [
+      {
+        "img_profile": "https://images.pexels.com/photos/29409175/pexels-photo-29409175/free-photo-of-portrait-of-a-smiling-woman-with-glasses.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "name": "Kelly Williams"
+      }
+    ],
+    "finalstage_details": [
+      {
+        "title_head": "Date Hired",
+        "value": "<SyntaxError: missing ) after argument list>"
+      },
+      {
+        "title_head": "Offer Accepted",
+        "value": "October 3, 2024"
+      }
+    ],
+    "finalstage_status": "Pending Offer",
+    "notes": [
+      {
+        "img_profile": "https://images.pexels.com/photos/29409175/pexels-photo-29409175/free-photo-of-portrait-of-a-smiling-woman-with-glasses.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "name": "Kelly Williams",
+        "position": "HR",
+        "text": "Aliquip nostrud eu elit officia laboris sint id pariatur proident culpa ut. Sunt amet nostrud eiusmod occaecat. Id aute qui laborum consequat adipisicing ex esse incididunt. Adipisicing est dolor eiusmod aliquip do aliquip deserunt ullamco incididunt Lorem mollit aliquip.\r\nSint incididunt mollit ut qui mollit elit cillum cillum do consectetur laborum sit. Occaecat nulla id esse Lorem mollit ad ad anim consectetur nulla cillum duis consequat nulla. Minim proident anim Lorem dolore ad consectetur tempor sunt aute ad. Fugiat cillum dolor ullamco aute nulla nisi occaecat consequat commodo consequat pariatur aliqua qui ea. Fugiat dolor nisi eiusmod ad excepteur laboris ullamco. Non consequat duis Lorem exercitation eiusmod excepteur ex sit. Officia ut sunt do minim excepteur officia in Lorem ex magna.\r\n"
+      }
+    ],
+    "work_experience": [
+      {
+        "job_title": "UI/UX Designer",
+        "company": "Facebook",
+        "years_experience": "November 2017 - February 2024"
+      },
+      {
+        "job_title": "Fullstack Developer",
+        "company": "Youtube",
+        "years_experience": "May 2023 - September 2019"
+      },
+      {
+        "job_title": "Technical Support",
+        "company": "Netflix",
+        "years_experience": "April 2019 - April 2019"
+      }
+    ],
+    "skills": [
+      "C#",
+      "Laravel",
+      "C#",
+      "Laravel",
+      "Laravel",
+      "TypeScript",
+      "Cypress"
+    ],
+    "availability_date": "Oct. 25, Oct. 26, Oct. 27",
+    "availability_time": "8:00 AM - 5:00 PM",
+    "files": "",
+    "applied_job": "Backend Developer",
+    "date_applied": "December 17, 2015",
+    "date_posted": "2017-04-29",
+    "last_updated": "2014-12-05"
+  },
+  {
+    "id": 7,
+    "img_profile": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "applicant_name": "Cindy Stein",
+    "job_applied": "Backend Developer",
+    "job_title": "Project Manager",
+    "status": "Under Review",
+    "hire_stage": "Shortlisted",
+    "experience_level": "Fresh Graduate",
+    "applicant_email": "cindystein@vitricomp.com",
+    "applicant_phone": "(957) 407-2747",
+    "description": "Esse sunt aliquip anim sunt ipsum. Minim occaecat nostrud commodo fugiat laboris culpa deserunt enim nostrud id ipsum nostrud est. Deserunt ea veniam sint nulla dolor amet ad.\r\nNisi anim ad irure magna in do excepteur ut minim ullamco sint exercitation id aliquip. Occaecat eu aliquip id aute id id enim culpa incididunt et magna. Cillum id aliqua elit duis aute ullamco dolore commodo est reprehenderit. Quis duis ea ea culpa ea laboris amet nisi eiusmod dolor ipsum.\r\n",
+    "interview_details": [
+      {
+        "title_head": "Interview Date",
+        "value": "September 25, 2024, at 2:00 PM"
+      },
+      {
+        "title_head": "Interview Type",
+        "value": "Zoom"
+      },
+      {
+        "title_head": "Interview Location",
+        "value": "ABC Corporation HQ, 1234 Main St, Suite 200"
+      },
+      {
+        "title_head": "Interview Status",
+        "value": "On Progress"
+      }
+    ],
+    "date_interview": "1-12-2024",
+    "start_time": "1:00 PM",
+    "interview_type": "Virtual - Google Meet",
+    "end_time": "2:00 PM",
+    "interview_status": "Completed",
+    "assigned_interview": [
+      {
+        "img_profile": "https://images.pexels.com/photos/29409175/pexels-photo-29409175/free-photo-of-portrait-of-a-smiling-woman-with-glasses.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "name": "Kelly Williams"
+      },
+      {
+        "img_profile": "https://images.pexels.com/photos/29377996/pexels-photo-29377996/free-photo-of-confident-young-woman-in-professional-attire.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "name": "Anna Anderson"
+      }
+    ],
+    "shortlisted_details": [
+      {
+        "title_head": "Shortlisted Date",
+        "value": "September 30, 2024"
+      },
+      {
+        "title_head": "Shortlisted by",
+        "value": "HR - Kelly Williams"
+      }
+    ],
+    "shortlisted_status": "On Progress",
+    "assigned_review": [
+      {
+        "img_profile": "https://images.pexels.com/photos/29409175/pexels-photo-29409175/free-photo-of-portrait-of-a-smiling-woman-with-glasses.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "name": "Kelly Williams"
+      }
+    ],
+    "finalstage_details": [
+      {
+        "title_head": "Date Hired",
+        "value": "<SyntaxError: missing ) after argument list>"
+      },
+      {
+        "title_head": "Offer Accepted",
+        "value": "October 3, 2024"
+      }
+    ],
+    "finalstage_status": "Offer Declined",
+    "notes": [
+      {
+        "img_profile": "https://images.pexels.com/photos/29409175/pexels-photo-29409175/free-photo-of-portrait-of-a-smiling-woman-with-glasses.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "name": "Kelly Williams",
+        "position": "HR",
+        "text": "Deserunt duis proident in duis non anim ad. Veniam eiusmod ad commodo ipsum sunt non. Esse esse dolore occaecat nisi tempor incididunt pariatur velit do ut excepteur. Aliqua elit irure excepteur commodo. Proident aliquip sit qui duis tempor voluptate sit ex et excepteur commodo.\r\nCulpa laborum magna eiusmod nulla cupidatat cupidatat amet. Elit aliquip enim consectetur cupidatat adipisicing cupidatat ipsum irure aliquip do aliqua magna incididunt. Non ea nisi amet nostrud non exercitation voluptate est laboris id fugiat cupidatat dolore. Ut cillum ea irure commodo consectetur dolor anim quis sint cupidatat ut aliquip. Magna dolor Lorem ut deserunt exercitation minim deserunt sit cillum. Commodo reprehenderit eiusmod voluptate minim do nisi labore exercitation deserunt consectetur incididunt est fugiat sint.\r\n"
+      }
+    ],
+    "work_experience": [
+      {
+        "job_title": "Senior Software Engineer",
+        "company": "Youtube",
+        "years_experience": "September 2016 - August 2018"
+      },
+      {
+        "job_title": "UI/UX Designer",
+        "company": "Netflix",
+        "years_experience": "March 2019 - November 2021"
+      },
+      {
+        "job_title": "Project Manager",
+        "company": "Facebook",
+        "years_experience": "October 2017 - October 2022"
+      }
+    ],
+    "skills": [
+      "Java",
+      "Java",
+      "Cypress",
+      "React JS",
+      "Cypress",
+      "React JS",
+      "TypeScript"
+    ],
+    "availability_date": "Oct. 25, Oct. 26, Oct. 27",
+    "availability_time": "8:00 AM - 5:00 PM",
+    "files": "",
+    "applied_job": "UI/UX Designer",
+    "date_applied": "July 19, 2019",
+    "date_posted": "2016-03-23",
+    "last_updated": "2024-10-19"
+  }
+]

@@ -1,0 +1,127 @@
+[
+  {
+    "id": 1,
+    "img": "https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png",
+    "bg_img": "https://images.unsplash.com/photo-1560179707-f14e90ef3623?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "title": "Senior Software Engineer",
+    "company": "Google",
+    "location": "California, United States",
+    "tags": ["Full-time", "6-8 experience", "80,000-100,000"],
+    "description": [
+      "Create user-centered design solutions that meet business goals and user needs, ensuring a seamless and enjoyable user experience.",
+      "Develop wireframes, prototypes, and high-fidelity mockups to effectively communicate design ideas to stakeholders and development teams."
+    ],
+    "role": "Lorem ipsum dolor sit amet consectetur. In dis tempus nibh tellus dolor adipiscing vulputate varius in. A scelerisque cum tincidunt sed sodales pharetra aliquet mattis. Sed eget odio enim neque ornare. Commodo nunc quam tellus aliquet sem. Urna vitae nibh porta libero morbi lorem diam. Faucibus curabitur ante odio pellentesque. Eget et et pharetra vel eget. Nulla purus sit quis arcu. Vel in gravida dui blandit est gravida cras nunc congue.",
+    "responsibilities": [
+      "Lorem ipsum dolor sit amet consectetur. Quis faucibus rhoncus mauris quisque vitae.",
+      "Lorem ipsum dolor sit amet consectetur. Quis faucibus rhoncus mauris quisque vitae. Lorem ipsum dolor sit amet consectetur. Quis faucibus rhoncus mauris quisque vitae",
+      "Maintain high code quality and standards."
+    ],
+    "qualifications": [
+      "Bachelor's degree in Computer Science or related field.",
+      "5+ years of experience in software development.",
+      "Proficiency in Java, Python, or C++."
+    ],
+    "posted": "Posted 2 days ago"
+  },
+  {
+    "id": 2,
+    "img": "https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg",
+    "bg_img": "https://images.unsplash.com/photo-1560179707-f14e90ef3623?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "title": "UI/UX Designer",
+    "company": "FutureTech Corp.",
+    "location": "BGC - Manila",
+    "tags": ["Full-time", "6-8 experience", "80,000-100,000"],
+    "description": [
+      "Create user-centered design solutions that meet business goals and user needs, ensuring a seamless and enjoyable user experience.",
+      "Develop wireframes, prototypes, and high-fidelity mockups to effectively communicate design ideas to stakeholders and development teams."
+    ],
+    "role": "Lorem ipsum dolor sit amet consectetur. In dis tempus nibh tellus dolor adipiscing vulputate varius in. A scelerisque cum tincidunt sed sodales pharetra aliquet mattis. Sed eget odio enim neque ornare. Commodo nunc quam tellus aliquet sem. Urna vitae nibh porta libero morbi lorem diam. Faucibus curabitur ante odio pellentesque. Eget et et pharetra vel eget. Nulla purus sit quis arcu. Vel in gravida dui blandit est gravida cras nunc congue.",
+    "responsibilities": [
+      "Lorem ipsum dolor sit amet consectetur. Quis faucibus rhoncus mauris quisque vitae.",
+      "Lorem ipsum dolor sit amet consectetur. Quis faucibus rhoncus mauris quisque vitae. Lorem ipsum dolor sit amet consectetur. Quis faucibus rhoncus mauris quisque vitae",
+      "Maintain high code quality and standards."
+    ],
+    "qualifications": [
+      "Bachelor's degree in Computer Science or related field.",
+      "5+ years of experience in software development.",
+      "Proficiency in Java, Python, or C++."
+    ],
+    "posted": "Posted 2 days ago"
+  },
+  {
+    "id": 3,
+    "img": "https://images.vexels.com/media/users/3/142789/isolated/preview/2bfb04ad814c4995f0c537c68db5cd0b-multicolor-swirls-circle-logo.png",
+    "bg_img": "https://images.unsplash.com/photo-1560179707-f14e90ef3623?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "title": "Java Developer",
+    "company": "FutureTech Corp.",
+    "location": "BGC - Manila",
+    "tags": ["Full-time", "6-8 experience", "80,000-100,000"],
+    "description": [
+      "Create user-centered design solutions that meet business goals and user needs, ensuring a seamless and enjoyable user experience.",
+      "Develop wireframes, prototypes, and high-fidelity mockups to effectively communicate design ideas to stakeholders and development teams."
+    ],
+    "role": "Lorem ipsum dolor sit amet consectetur. In dis tempus nibh tellus dolor adipiscing vulputate varius in. A scelerisque cum tincidunt sed sodales pharetra aliquet mattis. Sed eget odio enim neque ornare. Commodo nunc quam tellus aliquet sem. Urna vitae nibh porta libero morbi lorem diam. Faucibus curabitur ante odio pellentesque. Eget et et pharetra vel eget. Nulla purus sit quis arcu. Vel in gravida dui blandit est gravida cras nunc congue.",
+    "responsibilities": [
+      "Lorem ipsum dolor sit amet consectetur. Quis faucibus rhoncus mauris quisque vitae.",
+      "Lorem ipsum dolor sit amet consectetur. Quis faucibus rhoncus mauris quisque vitae. Lorem ipsum dolor sit amet consectetur. Quis faucibus rhoncus mauris quisque vitae",
+      "Maintain high code quality and standards."
+    ],
+    "qualifications": [
+      "Bachelor's degree in Computer Science or related field.",
+      "5+ years of experience in software development.",
+      "Proficiency in Java, Python, or C++."
+    ],
+    "posted": "Posted 2 days ago"
+  },
+  {
+    "id": 4,
+    "img": "https://plus.unsplash.com/premium_photo-1680281936362-aff258ecd143?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "bg_img": "https://images.unsplash.com/photo-1560179707-f14e90ef3623?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "title": "Senior Software Engineer",
+    "company": "FutureTech Corp.",
+    "location": "BGC - Manila",
+    "tags": ["Full-time", "6-8 experience", "80,000-100,000"],
+    "description": [
+      "Create user-centered design solutions that meet business goals and user needs, ensuring a seamless and enjoyable user experience.",
+      "Develop wireframes, prototypes, and high-fidelity mockups to effectively communicate design ideas to stakeholders and development teams."
+    ],
+    "role": "Lorem ipsum dolor sit amet consectetur. In dis tempus nibh tellus dolor adipiscing vulputate varius in. A scelerisque cum tincidunt sed sodales pharetra aliquet mattis. Sed eget odio enim neque ornare. Commodo nunc quam tellus aliquet sem. Urna vitae nibh porta libero morbi lorem diam. Faucibus curabitur ante odio pellentesque. Eget et et pharetra vel eget. Nulla purus sit quis arcu. Vel in gravida dui blandit est gravida cras nunc congue.",
+    "responsibilities": [
+      "Lorem ipsum dolor sit amet consectetur. Quis faucibus rhoncus mauris quisque vitae.",
+      "Lorem ipsum dolor sit amet consectetur. Quis faucibus rhoncus mauris quisque vitae. Lorem ipsum dolor sit amet consectetur. Quis faucibus rhoncus mauris quisque vitae",
+      "Maintain high code quality and standards."
+    ],
+    "qualifications": [
+      "Bachelor's degree in Computer Science or related field.",
+      "5+ years of experience in software development.",
+      "Proficiency in Java, Python, or C++."
+    ],
+    "posted": "Posted 2 days ago"
+  },
+  {
+    "id": 5,
+    "img": "https://plus.unsplash.com/premium_photo-1680281936362-aff258ecd143?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "bg_img": "https://images.unsplash.com/photo-1560179707-f14e90ef3623?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "title": "Senior Software Engineer",
+    "company": "FutureTech Corp.",
+    "location": "BGC - Manila",
+    "tags": ["Full-time", "6-8 experience", "80,000-100,000"],
+    "description": [
+      "Create user-centered design solutions that meet business goals and user needs, ensuring a seamless and enjoyable user experience.",
+      "Develop wireframes, prototypes, and high-fidelity mockups to effectively communicate design ideas to stakeholders and development teams."
+    ],
+    "role": "Lorem ipsum dolor sit amet consectetur. In dis tempus nibh tellus dolor adipiscing vulputate varius in. A scelerisque cum tincidunt sed sodales pharetra aliquet mattis. Sed eget odio enim neque ornare. Commodo nunc quam tellus aliquet sem. Urna vitae nibh porta libero morbi lorem diam. Faucibus curabitur ante odio pellentesque. Eget et et pharetra vel eget. Nulla purus sit quis arcu. Vel in gravida dui blandit est gravida cras nunc congue.",
+    "responsibilities": [
+      "Lorem ipsum dolor sit amet consectetur. Quis faucibus rhoncus mauris quisque vitae.",
+      "Lorem ipsum dolor sit amet consectetur. Quis faucibus rhoncus mauris quisque vitae. Lorem ipsum dolor sit amet consectetur. Quis faucibus rhoncus mauris quisque vitae",
+      "Maintain high code quality and standards."
+    ],
+    "qualifications": [
+      "Bachelor's degree in Computer Science or related field.",
+      "5+ years of experience in software development.",
+      "Proficiency in Java, Python, or C++."
+    ],
+    "posted": "Posted 2 days ago"
+  }
+]

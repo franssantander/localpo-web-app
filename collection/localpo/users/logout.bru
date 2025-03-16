@@ -1,0 +1,15 @@
+meta {
+  name: logout
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{localhost}}/api/auth-user/logout
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgtdXNlci9sb2dpbiIsImlhdCI6MTczNDg2NDg5MCwiZXhwIjoxNzM0ODY4NDkwLCJuYmYiOjE3MzQ4NjQ4OTAsImp0aSI6IjBCSllTcGFuRUU1dVZmdHUiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9._u3fGNJgvVGalNtWHlx1PnPDP0K1J_15UM2Sos2X1wY
+}

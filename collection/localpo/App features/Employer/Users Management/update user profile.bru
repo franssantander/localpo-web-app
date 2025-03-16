@@ -1,0 +1,27 @@
+meta {
+  name: update user profile
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{localhost}}/app-usersmanagement/edit-user
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  profile_picture: @file(C:\Users\santa_p5vbc9h\Downloads\img profile.jpg)
+  position: CEO
+  ~department: Executive
+  ~name: Joe Sassy update
+  ~email: joesassy@gmail.com
+  ~phone_number: 9123454356
+  ~date_birth: 15/01/2025
+  ~address_1: test address 1
+  ~address_2: test address 2
+  ~region: Region III
+  ~province: Bulacan
+  ~city_municipalities: Norzagaray
+  ~barangay: Tigbe
+}

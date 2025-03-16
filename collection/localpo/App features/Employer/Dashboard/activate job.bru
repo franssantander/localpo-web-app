@@ -1,0 +1,15 @@
+meta {
+  name: activate job
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{localhost}}/app-dashboard/reopen-job
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  id: 2
+}

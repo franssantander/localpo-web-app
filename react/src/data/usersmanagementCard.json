@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Total Users",
+    "icon": "ri:group-line",
+    "total": 596,
+    "description": "All Users"
+  },
+  {
+    "title": "Active Users",
+    "icon": "ri:user-follow-line",
+    "total": 59,
+    "description": "Total Active Users"
+  },
+  {
+    "title": "Suspense Users",
+    "icon": "ri:error-warning-line",
+    "total": 4,
+    "description": "Total Suspense Users"
+  }
+]

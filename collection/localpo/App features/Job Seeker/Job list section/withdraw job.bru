@@ -1,0 +1,15 @@
+meta {
+  name: withdraw job
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{localhost}}/app-jobseeker/withdraw-application
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  applied_job_id: 1
+}
