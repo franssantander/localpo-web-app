@@ -1,5 +1,21 @@
-JWT Set expiration handler:
-    All controller:
+
+#Back Logs
+
+Frontend:
+    Job Seeker:
+    Login:
+        ☐ If status is 'complete user profile' then redirect to 'complete profile' page.
+
+    JWT Token:
+        ☐ If token is expired, then redirect to login page.
+
+    Complete Profile:
+        ☐ It should not or restrict to navigate on routes of 'user-profile', unless your status is 'pending for complete profile'
+
+
+Backend:
+    JWT Set expiration handler:
+        All controller:
 
 
         
