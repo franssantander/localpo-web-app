@@ -27,7 +27,7 @@ return new class extends Migration
             $table->string('address_2')->nullable();
             $table->string('barangay')->nullable();
             $table->string('barangay_code')->nullable();
-            $table->string('city_municipalities')->nullable();
+            $table->string('municipalities')->nullable();
             $table->string('municipalities_code')->nullable();
             $table->date('date_birth')->nullable();
             $table->string('province')->nullable();

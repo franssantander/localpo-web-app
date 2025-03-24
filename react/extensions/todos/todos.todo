@@ -4,5 +4,8 @@ Job Seeker:
         ✔ Add Experience Modal @started(25-03-06 19:42) @done(25-03-06 20:54) @lasted(1h12m51s)
         ✔ Payload send together with Experience, description and skills @started(25-03-06 20:58) @done(25-03-06 21:08) @lasted(10m52s)
         ✔ Add skills input tag and payload @done(25-03-06 21:08)
-        ☐ Handle submit complete profile to Backend.
+        ✔ Handle submit complete profile to Backend. @done(25-03-24 19:14)
+        ✔ Handle error message from backend. @done(25-03-24 20:47)
+        ✔ Remove the phone number input on complete profile. @done(25-03-24 20:47)
+
 

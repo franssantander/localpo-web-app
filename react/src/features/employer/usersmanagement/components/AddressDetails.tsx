@@ -26,7 +26,7 @@ const AddressDetails: React.FC = ({ usersData }) => {
       region_code: values.region_code,
       province: values.province,
       province_code: values.province_code,
-      city_municipalities: values.municipalities,
+      municipalities: values.municipalities,
       municipalities_code: values.municipalities_code,
       barangay: values.barangay,
       barangay_code: values.barangay_code,

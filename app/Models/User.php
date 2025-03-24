@@ -30,7 +30,7 @@ class User extends Authenticatable implements JWTSubject
         'experience',
         'barangay',
         'barangay_code',
-        'city_municipalities',
+        'municipalities',
         'municipalities_code',
         'date_birth',
         'province',

@@ -83,7 +83,7 @@ class JobSeekerController extends Controller
             if (!$user) {
                 return response()->json(['message' => 'Invalid token.', 'status' => 401], 401);
             }
-            
+
             $job = PostedJobs::withTrashed()->with('company')->where('id', $job_id)->first();
 
             if (!$job) {
@@ -126,8 +126,8 @@ class JobSeekerController extends Controller
                     [$job->salary_range],
                     [$job->experience_level]
                 )),
-                'is_applied' => $user ? $job->applied_jobs->where('posted_job_id', $job->id)->isNotEmpty() : false,
-                'is_saved' => $user ? $job->saved_jobs->where('user_id', $user->id)->isNotEmpty() : false,
+                'is_applied' => $user->id ? $job->applied_jobs->where('user_id', $user->id)->isNotEmpty() : false,
+                'is_saved' => $user->id ? $job->saved_jobs->where('user_id', $user->id)->isNotEmpty() : false,
                 "company_industry" => $job->company->industry_type ?? "N/A",
                 "company_phone" => $job->company->company_phone ?? "N/A",
                 "company_email" => $job->company->company_email ?? "N/A",
@@ -150,8 +150,8 @@ class JobSeekerController extends Controller
                         [$similarJob->experience_level]
                     )),
                     "status" => $similarJob->status,
-                    'is_saved' => $user ? $similarJob->saved_jobs->where('user_id', $user->id)->isNotEmpty() : false,
-                    'is_applied' => $user ? $similarJob->applied_jobs->where('posted_job_id', $similarJob->id)->isNotEmpty() : false,
+                    'is_saved' => $user->id ? $similarJob->saved_jobs->where('user_id', $user->id)->isNotEmpty() : false,
+                    'is_applied' => $user->id ? $similarJob->applied_jobs->where('user_id', $user->id)->isNotEmpty() : false,
                     'company_industry' => $similarJob->company->industry_type,
                     'company_phone' => $similarJob->company->company_phone,
                     'company_email' => $similarJob->company->company_email,
@@ -316,19 +316,20 @@ class JobSeekerController extends Controller
         }
     }
 
-    public function applyJob(Request $request){
+    public function applyJob(Request $request)
+    {
         DB::beginTransaction();
         try {
 
             $user = AuthHelper::jwtHandler('parseToken');
-            
+
             if (!$user) {
                 return response()->json(['message' => 'Invalid token.', 'status' => 401], 401);
-            }  
+            }
 
             $jobData = PostedJobs::where('id', $request->input('posted_job_id'))->first();
 
-            if(!$jobData){
+            if (!$jobData) {
                 return response()->json(['message' => 'Job not found.', 'status' => 404], 404);
             }
 
@@ -337,14 +338,14 @@ class JobSeekerController extends Controller
             }
 
             $alreadyApplied = AppliedJobs::where('user_id', $user->id)
-                                ->where('posted_job_id',  $request->input('posted_job_id'))
-                                ->exists();
+                ->where('posted_job_id',  $request->input('posted_job_id'))
+                ->exists();
 
-            if($alreadyApplied){
+            if ($alreadyApplied) {
                 return response()->json(['message' => 'You have already applied for this job.', 'status' => 400], 400);
             }
 
-            $validator = Validator::make($request->all(),[
+            $validator = Validator::make($request->all(), [
                 'posted_job_id' => 'required',
                 'resume' => 'required|file|mimes:pdf,doc,docx|max:2048',
                 'cover_letter' => 'nullable|file|mimes:pdf,doc,docx|max:2048',
@@ -353,14 +354,14 @@ class JobSeekerController extends Controller
                 'availability_time_2' => 'required',
             ]);
 
-            if($validator->fails()){
+            if ($validator->fails()) {
                 return response()->json(['message' => $validator->errors()->getMessages()], 422);
             }
 
             $resume = $request->file('resume');
             $resumeName = time() . '_' . $resume->getClientOriginalName();
             $resumePath = $resume->storeAs('resumes', $resumeName, 'public');
-            
+
             $coverLetterPath = null;
             if ($request->hasFile('cover_letter')) {
                 $coverLetter = $request->file('cover_letter');
@@ -369,41 +370,42 @@ class JobSeekerController extends Controller
             }
 
             AppliedJobs::create([
-                'user_id'=> $user->id,
-                'company_id'=> $jobData->company_id,
+                'user_id' => $user->id,
+                'company_id' => $jobData->company_id,
                 'posted_job_id' => $request->input('posted_job_id'),
-                "resume" =>$resumePath,
+                "resume" => $resumePath,
                 "cover_letter" => $coverLetterPath,
                 "contact_number" => $request->input('contact_number'),
                 "availability_time_1" => $request->input('availability_time_1'),
                 "availability_time_2" => $request->input('availability_time_2'),
             ]);
-          
+
             DB::commit();
             return response()->json(['message' => 'Applied Job Successfully', 'status' => 200], 200);
         } catch (\Throwable $e) {
             DB::rollBack();
-          return response()->json(['message'=> 'Failed to apply job', 'errors' => $e->getMessage(), 'status' => 500], 500);
+            return response()->json(['message' => 'Failed to apply job', 'errors' => $e->getMessage(), 'status' => 500], 500);
         }
     }
 
-    public function withdrawApplication(Request $request){
+    public function withdrawApplication(Request $request)
+    {
         DB::beginTransaction();
         try {
-            
+
             $user = AuthHelper::jwtHandler('parseToken');
 
             if (!$user) {
                 return response()->json(['message' => 'Invalid token.', 'status' => 401], 401);
-            }  
+            }
 
             $validator = Validator::make($request->all(), [
                 'applied_job_id' => 'required|exists:applied_jobs,posted_job_id',
             ], [
                 'applied_job_id.exists' => "No posted job found.",
-            ]);            
+            ]);
 
-            if($validator->fails() ){
+            if ($validator->fails()) {
                 return response()->json(['message' => $validator->errors()->getMessages(), 'status' => 422], 422);
             }
 
@@ -411,32 +413,53 @@ class JobSeekerController extends Controller
 
             $title = "Application Withdrawn";
             $message = "Your job application has been successfully withdrawn. We hope you find the right opportunity soon!";
-            $notification = ResponseHelper::notificationResponse($title, $message); 
+            $notification = ResponseHelper::notificationResponse($title, $message);
 
             DB::commit();
-            
+
             return response()->json(['message' => 'Job has been successfully cancelled.', 'notification' => $notification, 'status' => 200], 200);
         } catch (\Throwable $e) {
             DB::rollBack();
-           return response()->json(['message' => 'Failed to cancel applied job.', 'errors'=> $e->getMessage(), 'status' => 500], 500);
+            return response()->json(['message' => 'Failed to cancel applied job.', 'errors' => $e->getMessage(), 'status' => 500], 500);
         }
     }
 
-    public function getAppliedJobs(){
+    public function getAppliedJobs()
+    {
         try {
             $user = AuthHelper::jwtHandler('parseToken');
 
-            if(!$user){
-                return response()->json(['message'=> 'Invalid token.', 'status'=> 401], 401);
+            if (!$user) {
+                return response()->json(['message' => 'Invalid token.', 'status' => 401], 401);
             }
 
             $appliedJobs = AppliedJobs::where('user_id', $user->id)->with('posted_job')->get();
 
             $appliedJobsData = [];
-            foreach($appliedJobs as $appliedJob){
+            foreach ($appliedJobs as $appliedJob) {
                 $resumeFilename = $appliedJob->resume ? preg_replace('/^\d+_/', '', basename($appliedJob->resume)) : null;
                 $coverLetterFilename = $appliedJob->cover_letter ? preg_replace('/^\d+_/', '', basename($appliedJob->cover_letter)) : null;
-                
+
+                $documents = [];
+
+                if ($appliedJob->resume) {
+                    $documents[] = [
+                        "icon" => url("storage/assets/" . (str_ends_with($resumeFilename, '.pdf') ? "pdf-icon.svg" : "docx-icon.svg")),
+                        "title" => $resumeFilename,
+                        "file" => url('storage/' . $appliedJob->resume),
+                        "uploaded_date" => $appliedJob->created_at->format('Y-m-d H:i:s'),
+                    ];
+                }
+
+                if ($appliedJob->cover_letter) {
+                    $documents[] = [
+                        "icon" => url("storage/assets/" . (str_ends_with($coverLetterFilename, '.pdf') ? "pdf-icon.svg" : "docx-icon.svg")),
+                        "title" => $coverLetterFilename,
+                        "file" => url('storage/' . $appliedJob->cover_letter),
+                        "uploaded_date" => $appliedJob->created_at->format('Y-m-d H:i:s'),
+                    ];
+                }
+
                 $appliedJobsData[] = [
                     'posted_job_id' => $appliedJob->posted_job_id,
                     'company_id' => $appliedJob->posted_job->company_id ?? null,
@@ -458,30 +481,13 @@ class JobSeekerController extends Controller
                     'applicant_status' => $appliedJob->status,
                     'posted_date' => $appliedJob->posted_job->created_at->format('Y-m-d H:i:s'),
                     'date_applied' => $appliedJob->created_at->format('Y-m-d H:i:s'),
-                    'uploaded_resume' => $appliedJob->resume 
-                    ? url('storage/' . $appliedJob->resume) 
-                    : null,
-                'uploaded_cover_letter' => $appliedJob->cover_letter 
-                    ? url('storage/' . $appliedJob->cover_letter) 
-                    : null,
-                    'documents' => [
-                    [
-                        "icon" => $appliedJob->resume 
-                            ? url("storage/assets/" . (str_ends_with($resumeFilename, '.pdf') ? "pdf-icon.svg" : "docx-icon.svg")) 
-                            : null,
-                        "title" => $resumeFilename,
-                        'file' => $appliedJob->resume ? url('storage/' . $appliedJob->resume) : null,
-                        "uploaded_date" => $appliedJob->created_at->format('Y-m-d H:i:s'),
-                    ],
-                    [
-                        "icon" => $appliedJob->cover_letter 
-                            ? url("storage/assets/" . (str_ends_with($coverLetterFilename, '.pdf') ? "pdf-icon.svg" : "docx-icon.svg")) 
-                            : null,
-                        "title" => $coverLetterFilename,
-                        'file' => $appliedJob->cover_letter ? url('storage/' . $appliedJob->cover_letter) : null,
-                        "uploaded_date" => $appliedJob->created_at->format('Y-m-d H:i:s')
-                    ]
-                ]
+                    'uploaded_resume' => $appliedJob->resume
+                        ? url('storage/' . $appliedJob->resume)
+                        : null,
+                    'uploaded_cover_letter' => $appliedJob->cover_letter
+                        ? url('storage/' . $appliedJob->cover_letter)
+                        : null,
+                    'documents' => $documents,
                 ];
             }
 
@@ -489,7 +495,7 @@ class JobSeekerController extends Controller
 
             return response()->json(['message' => 'Successfuly get applied jobs', 'data' => $appliedJobsData, 'status' => 200], 200);
         } catch (\Throwable $e) {
-         return response()->json(['message'=> 'Failed to get applied jobs.','errors'=> $e->getMessage(),'status'=> 500], 500);
+            return response()->json(['message' => 'Failed to get applied jobs.', 'errors' => $e->getMessage(), 'status' => 500], 500);
         }
     }
 }
