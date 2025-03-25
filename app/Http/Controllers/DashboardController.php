@@ -10,6 +10,7 @@ use App\helpers\CardDataHelper;
 use Illuminate\Http\Request;
 use App\helpers\ResponseHelper;
 use App\Models\AppliedJobs;
+use App\Models\Companies;
 use Illuminate\Support\Facades\DB;
 use Tymon\JWTAuth\Facades\JWTAuth;
 use Illuminate\Support\Facades\Validator;
@@ -218,7 +219,7 @@ class DashboardController extends Controller
             }
 
             $perPage = $request->input('per_page', 10);
-            $postedJobs = AppliedJobs::withTrashed()->where('company_id', $user->company_id)->paginate($perPage);
+            $postedJobs = AppliedJobs::where('company_id', $user->company_id)->paginate($perPage);
 
             $postedJobsData = $postedJobs->items();
 
@@ -553,6 +554,44 @@ class DashboardController extends Controller
                 'message' => 'Token not provided.',
                 'status' => 401
             ], 401);
+        }
+    }
+
+    //* view job card
+    public function viewJobCard(Request $request)
+    {
+
+        DB::beginTransaction();
+        try {
+
+            $validator = Validator::make($request->all(), [
+                'id' => 'required'
+            ]);
+
+            if ($validator->fails()) {
+                return response()->json([
+                    'message' => $validator->errors()->getMessages(),
+                    'status' => 422
+                ], 422);
+            }
+
+            $appliedJob = AppliedJobs::where('posted_job_id', $request->id)
+                ->count();
+
+            $applicantStatus = [
+                ['title' => 'Applied', 'count' => $appliedJob],
+                ['title' => 'In Review', 'count' => 0],
+                ['title' => 'Interviewed', 'count' => 0],
+                ['title' => 'Short listed', 'count' => 0],
+                ['title' => 'Offer Made', 'count' => 0],
+                ['title' => 'Hired', 'count' => 0],
+            ];
+
+            DB::commit();
+            return response()->json(['message' => 'Successfully View Job.', 'data' => $applicantStatus, 'status' => 200], 200);
+        } catch (\Throwable $e) {
+            DB::rollBack();
+            return response()->json(['message' => 'Something went wrong', 'errors' => $e->getMessage(), 'status' => 500], 500);
         }
     }
 }

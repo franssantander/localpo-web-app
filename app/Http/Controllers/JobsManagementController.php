@@ -6,6 +6,7 @@ use Throwable;
 use App\Models\PostedJobs;
 use App\helpers\AuthHelper;
 use App\helpers\TableHelper;
+use App\Models\AppliedJobs;
 use App\Models\PermissionPerRole;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -29,8 +30,15 @@ class JobsManagementController extends Controller
 
             $perPage = $request->input('per_page', 10);
 
-            $postedJobs = PostedJobs::withTrashed()->where('company_id', $user->company_id)->paginate($perPage);
+            $postedJobs = PostedJobs::withTrashed()
+                ->withCount('applied_jobs')
+                ->where('company_id', $user->company_id)
+                ->paginate($perPage);
+
+            $appliedJobs = AppliedJobs::where('company_id', $user->company_id)->get();
             $postedJobsData = $postedJobs->items();
+
+            // dd($postedJobs);
 
             $permissions = PermissionPerRole::where('title', 'Jobs Management')->get();
 
@@ -71,7 +79,7 @@ class JobsManagementController extends Controller
                     'industry' => $job->industry,
                     'job_expiry' => $job->job_expiry,
                     'status' => $job->status,
-                    'applications' => 0,
+                    'applications' => $job->applied_jobs_count,
                     'date_posted' => $job->created_at ? $job->created_at->format('Y-m-d') : null,
                     'last_updated' => $job->updated_at ? $job->updated_at->format('Y-m-d') : null,
                     'actions' => $tableActions
@@ -116,6 +124,9 @@ class JobsManagementController extends Controller
 
 
             $postedJobs = PostedJobs::withTrashed()->where('id', $request->id)->first();
+            $applicants = AppliedJobs::with('user')->where('posted_job_id', $request->id)->get();
+
+            // dd($applicants->resume);
 
             if (!$postedJobs) {
                 return response()->json(["message" => "Job not found.", "status" => 404], 404);
@@ -146,8 +157,57 @@ class JobsManagementController extends Controller
                 'status' => $postedJobs->status,
             ];
 
+            $applicantsData = [];
 
-            return response()->json(["message" => "Successfully fetched job details", "data" => $jobData, "status" => 200], 200);
+            foreach ($applicants as $applicant) {
+                $resumeFilename = $applicant->resume ? preg_replace('/^\d+_/', '', basename($applicant->resume)) : null;
+                $coverLetterFilename = $applicant->cover_letter ? preg_replace('/^\d+_/', '', basename($applicant->cover_letter)) : null;
+                $documents = [];
+
+                if ($applicant->resume) {
+                    $documents[] = [
+                        "icon" => url("storage/assets/" . (str_ends_with($resumeFilename, '.pdf') ? "pdf-icon.svg" : "docx-icon.svg")),
+                        "title" => $resumeFilename,
+                        "file" => url('storage/' . $applicant->resume),
+                        "uploaded_date" => $applicant->created_at->format('Y-m-d H:i:s'),
+                    ];
+                }
+
+                if ($applicant->cover_letter) {
+                    $documents[] = [
+                        "icon" => url("storage/assets/" . (str_ends_with($coverLetterFilename, '.pdf') ? "pdf-icon.svg" : "docx-icon.svg")),
+                        "title" => $coverLetterFilename,
+                        "file" => url('storage/' . $applicant->cover_letter),
+                        "uploaded_date" => $applicant->created_at->format('Y-m-d H:i:s'),
+                    ];
+                }
+
+
+                $applicantsData[] = [
+                    'profile_picture' => $applicant->user->profile_picture ? url('storage/' . $applicant->user->profile_picture) : '',
+                    'bg_cover' => '',
+                    'applicant_name' => $applicant->user->name,
+                    'date_applied' => $applicant->created_at->format('Y-m-d'),
+                    'applicant_email' => $applicant->user->email,
+                    'description' => $applicant->user->description,
+                    'contact_number' => $applicant->user->phone_number,
+                    'location' => $applicant->user->municipalities . ', ' . $applicant->user->province,
+                    'status' => $applicant->status,
+                    'available_date' => $applicant->availability_days,
+                    'available_time' => $applicant->availability_time_1 . ' - ' . $applicant->availability_time_2,
+                    'availability_time_1' => $applicant->availability_time_1,
+                    'availability_time_2' => $applicant->availability_time_2,
+                    'experience' => $applicant->user->experience,
+                    'skills' => $applicant->user->skills,
+                    'documents' => $documents
+                ];
+            }
+
+
+            return response()->json(["message" => "Successfully fetched job details", "data" => [
+                'jobs_data' =>  $jobData,
+                'applicants_data' => $applicantsData,
+            ], "status" => 200], 200);
         } catch (Throwable $e) {
 
             return response()->json(["message" => "Something went wrong", "errors" => $e->getMessage(), "status" => 500], 500);

@@ -12,10 +12,17 @@ Frontend:
     Complete Profile:
         ☐ It should not or restrict to navigate on routes of 'user-profile', unless your status is 'pending for complete profile'
 
+    Styles Issues:
+        ☐ Jobs Management -> View Application Drawer
+
 
 Backend:
     JWT Set expiration handler:
-        All controller:
+        ☐ All controller:
+    Create a helper function for files resume and cover letter:
+        ☐ JobSeekerController
+        ☐ DashboardController
+        ☐ JobsManagementController
 
 
         

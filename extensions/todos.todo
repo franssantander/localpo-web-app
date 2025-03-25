@@ -13,10 +13,10 @@ Frontend:
     
     Employer:
         1. Dashboard:
-            ☐ Applied applicant status.
+            ✔ Applied applicant status. @done(25-03-25 19:27)
         
         2. Jobs Management:
-            ☐ On jobs management when view the application , show its data accordingly.
+            ✔ On jobs management when view the application , show its data accordingly. @started(25-03-25 19:49) @done(25-03-25 20:51) @lasted(1h2m53s)
 
 
 Backend:
@@ -31,11 +31,10 @@ Backend:
                 ✔ fix the return is_applied, it should based on user_id whose applied job. @done(25-03-24 20:46)
         
         DashboardController:
-            ☐ Create new API request for view the posted card job, and return what currently now available data.
+            ✔ Create new API request for view the posted card job, and return what currently now available data. @done(25-03-25 21:36)
         
         JobsManagementController:
-            ☐ return the total of applications
-            ☐ Create new API for View job.
+            ✔ return the total of applications @done(25-03-25 21:37)
         
     
     Employer:

@@ -65,6 +65,7 @@ Route::controller(DashboardController::class)->group(function () {
         Route::post('edit-job', 'editJob');
         Route::post('close-job', 'closeJob');
         Route::post('reopen-job', 'reopenJob');
+        Route::get('view-job-card', 'viewJobCard');
         Route::get('get-all-postedjob', 'getAllPostedJob');
         Route::get('get-all-recent-application', 'getAllRecentApplication');
     });
@@ -106,7 +107,7 @@ Route::controller(JobSeekerController::class)->group(function () {
         Route::get('get-all-jobs', 'getAllJobs');
         Route::get('view-job/{job_id}', 'viewJob');
         // Route::post('view-job', 'viewJob');
-        
+
         //* save jobs section
         Route::get('get-all-savedjob', 'getSavedJobs');
         Route::post('save-job', 'saveJob');

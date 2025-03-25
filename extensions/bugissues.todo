@@ -5,10 +5,17 @@ Frontend:
             ☐ Recent Application card when viewing, fixed also the File attachment display file.
             ☐ Fixed the description, and skills section styles.
             ☐ fixed the return of phone number.
+        2. Dashboard Page:
+            ☐ Fix the bug state on open of close job modal on dashboard card, when try to navigate between two page of Jobs Management and Dashboard view card.
 
 Backend:
     Job Seeker:
         JobSeekerController:
             1. getAllJobs:
                 ✔ fix the return is_applied, it should based on user_id whose applied job. @done(25-03-24 20:47)
+    
+    Employer:
+        DashboardController:
+            1, get-all-recent-applications:
+                ☐ fix the error of when the job is close, then the return of API or data is throw of an error of job_title is null. So the scenario is there is a list of applicants that applied to that job, then when the job is close, there is an error.
     
