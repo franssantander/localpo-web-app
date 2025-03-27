@@ -5,11 +5,14 @@ import ShortListedCol from "../../../data/ShortListedCol.json";
 import { useColumnsDefs } from "../../../components/ColumnDefs";
 import { useExportCsv } from "../../../hooks/useExportCsv";
 import JobsManagementTab from "./components/JobsManagementTab";
+import { useApplicationsHook } from "./hooks/useApplicationsHook";
 
-const Applications: React.FC = () => {
-  const columns = useColumnsDefs(ApplicationsCol, "Applications");
+const Applications: React.FC = (apiKey) => {
+  // const columns = useColumnsDefs(ApplicationsCol, "Applications");
+   const columns = useColumnsDefs(JSON.parse(apiKey?.table), "Applications");
   const shortListedCol = useColumnsDefs(ShortListedCol, "Shortlisted");
   const { onBtnExport, gridRef } = useExportCsv();
+    const { applicationsData } = useApplicationsHook(apiKey, 10);
 
   return (
     <>

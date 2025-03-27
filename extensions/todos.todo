@@ -18,6 +18,9 @@ Frontend:
         2. Jobs Management:
             ✔ On jobs management when view the application , show its data accordingly. @started(25-03-25 19:49) @done(25-03-25 20:51) @lasted(1h2m53s)
 
+        3. Applications:
+            ✔ Integrate the API for get all applications on table. @done(25-03-27 20:09)
+
 
 Backend:
     Job Seeker:
@@ -35,6 +38,11 @@ Backend:
         
         JobsManagementController:
             ✔ return the total of applications @done(25-03-25 21:37)
+
+        ApplicationsManagementController:
+            ✔ Create new API request for get all applications for table @done(25-03-27 20:10)
+            ☐ Create a API for view the application data.
+            ☐ Return the necessary actions on the FE.
         
     
     Employer:

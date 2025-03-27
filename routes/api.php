@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ApplicationsManagementController;
 use App\Http\Controllers\AuthUserController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
@@ -79,6 +80,16 @@ Route::controller(JobsManagementController::class)->group(function () {
     ], function () {
         Route::get('get-all-jobsmanagement', 'getJobsManagement');
         Route::get('view-job', 'viewJob');
+    });
+});
+
+Route::controller(ApplicationsManagementController::class)->group(function () {
+    Route::group([
+        "middleware" => "api",
+        "prefix" => "app-applicationsmanagement"
+    ], function () {
+        Route::get('get-all-applications', 'getApplicationsManagement');
+       
     });
 });
 
