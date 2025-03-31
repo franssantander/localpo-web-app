@@ -89,7 +89,7 @@ Route::controller(ApplicationsManagementController::class)->group(function () {
         "prefix" => "app-applicationsmanagement"
     ], function () {
         Route::get('get-all-applications', 'getApplicationsManagement');
-       
+        Route::post('view-application', 'viewApplication');
     });
 });
 
