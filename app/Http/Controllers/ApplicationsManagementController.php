@@ -99,7 +99,7 @@ class ApplicationsManagementController extends Controller
                 ], 422);
             }
 
-            $appliedDetails = AppliedDetails::with('applied_job', 'user')
+            $appliedDetails = AppliedDetails::with('applied_job', 'posted_jobs', 'user')
                 ->where('applied_job_id', $request->application_id)
                 ->get();
 
@@ -114,15 +114,44 @@ class ApplicationsManagementController extends Controller
                 return [
                     'applicant_name' => $applied->user->name,
                     'job_title' => '',
-                    'applied_job' => '',
-                    'date_applied' => '',
-                    'status' => '',
+                    'applied_job' => $applied->posted_jobs->job_title,
+                    'date_applied' => $applied->applied_job->created_at->format('d/m/y'),
+                    'status' => $applied->applied_job->status,
                     'hire_stage' => '',
-                    'applicant_email' => '',
-                    'applicant_phone' => '',
+                    'applicant_email' => $applied->user->email,
+                    'applicant_phone' => $applied->user->phone_number,
+                    'img_profile' => $applied->user->profile_picture,
+                    'description' => $applied->user->description,
+                    'skills' => $applied->user->skills,
+                    'work_experience' => $applied->user->experience,
+                    'availability_time' => [$applied->applied_job->availability_time_1, $applied->applied_job->availability_time_2],
+                    'notes' => $applied->notes,
+                    'interview_details' =>
+                    [
+                        ['title_head' => 'Interview Date', 'value' => $applied->interview_date],
+                        ['title_head' => 'Interview Type', 'value' => $applied->interview_type],
+                        ['title_head' => 'Interview Location', 'value' => $applied->interview_location],
+                        ['title_head' => 'Interview Status', 'value' => $applied->interview_status],
+                    ],
+                    'assigned_interview' => $applied->assigned_interviewer,
+                    'shortlisted_details' =>
+                    [
+                        ['title_head' => 'Shortlisted Date', 'value' => $applied->shortlisted_date],
+                        ['title_head' => 'Shortlisted By', 'value' => $applied->shortlisted_by],
+                        ['title_head' => 'Shortlisted Status', 'value' => $applied->shortlisted_status],
+                    ],
+                    'assigned_review' => $applied->assigned_review,
+                    'finalstage_details' =>
+                    [
+                        ['title_head' => 'Date Hired', 'value' => $applied->date_hired],
+                        ['title_head' => 'Offer Accepted', 'value' => $applied->offer_accepted],
+                    ],
+                    'finalstage_status' => $applied->offer_status,
+                    'notes' => $applied->notes,
                 ];
             });
 
+            // dd($appliedDetails);
 
             return response()->json([
                 'status' => 'success',

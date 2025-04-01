@@ -32,6 +32,10 @@ class AppliedDetails extends Model
         return $this->belongsTo(AppliedJobs::class, 'applied_job_id');
     }
 
+    public function posted_jobs(){
+        return $this->belongsTo(PostedJobs::class, 'applied_job_id', 'id');
+    }
+
     public function user()
     {
         return $this->belongsTo(User::class, 'user_id', 'id');
