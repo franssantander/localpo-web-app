@@ -12,14 +12,6 @@ export const useApplicationsView = (id) => {
         { enabled: true }
     );
 
-    // const { data, mutate } = useMutationApi(
-    //     {
-    //         url: API_ENDPOINTS.VIEW_APPLICATION,
-    //         method: "POST",
-    //     },
-    //     ["view-application"]
-    // );
-
     const viewApplicationData = data?.data;
 
     return {

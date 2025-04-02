@@ -58,7 +58,7 @@ const HiringProgressTab: React.FC<HiringProgressTabProps> = (props) => {
         <div>
           <div className="grid grid-cols gap-y-5">
             <h1 className="text-sm font-bold text-textBlack">Notes</h1>
-            <div className="grid grid-cols gap-y-4">
+            {/* <div className="grid grid-cols gap-y-4">
               {notes.map((note, index: number) => (
                 <>
                   <div className="flex items-center gap-x-1" key={index}>
@@ -75,7 +75,7 @@ const HiringProgressTab: React.FC<HiringProgressTabProps> = (props) => {
                   <p className="text-textGray text-sm">{note.text}</p>
                 </>
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

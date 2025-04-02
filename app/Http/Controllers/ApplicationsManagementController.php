@@ -101,7 +101,7 @@ class ApplicationsManagementController extends Controller
 
             $appliedDetails = AppliedDetails::with('applied_job', 'posted_job', 'user')
                 ->where('applied_job_id', $request->application_id)
-                ->get();
+                ->first();
 
             if (!$appliedDetails) {
                 return response()->json([
@@ -110,73 +110,136 @@ class ApplicationsManagementController extends Controller
                 ], 404);
             }
 
-            $appliedDetailsData = $appliedDetails->map(function ($applied) {
-                $resumeFilename = $applied->applied_job->resume ? preg_replace('/^\d+_/', '', basename($applied->applied_job->resume)) : null;
-                $coverLetterFilename = $applied->applied_job->cover_letter ? preg_replace('/^\d+_/', '', basename($applied->applied_job->cover_letter)) : null;
+            // $appliedDetailsData = $appliedDetails->map(function ($applied) {
+            //     $resumeFilename = $applied->applied_job->resume ? preg_replace('/^\d+_/', '', basename($applied->applied_job->resume)) : null;
+            //     $coverLetterFilename = $applied->applied_job->cover_letter ? preg_replace('/^\d+_/', '', basename($applied->applied_job->cover_letter)) : null;
 
-                $documents = [];
+            //     $documents = [];
 
-                if ($applied->applied_job->resume) {
-                    $documents[] = [
-                        "icon" => url("storage/assets/" . (str_ends_with($resumeFilename, '.pdf') ? "pdf-icon.svg" : "docx-icon.svg")),
-                        "title" => $resumeFilename,
-                        "file" => url('storage/' . $applied->applied_job->resume),
-                        "uploaded_date" => $applied->applied_job->created_at->format('Y-m-d H:i:s'),
-                    ];
-                }
+            //     if ($applied->applied_job->resume) {
+            //         $documents[] = [
+            //             "icon" => url("storage/assets/" . (str_ends_with($resumeFilename, '.pdf') ? "pdf-icon.svg" : "docx-icon.svg")),
+            //             "title" => $resumeFilename,
+            //             "file" => url('storage/' . $applied->applied_job->resume),
+            //             "uploaded_date" => $applied->applied_job->created_at->format('Y-m-d H:i:s'),
+            //         ];
+            //     }
 
-                if ($applied->applied_job->cover_letter) {
-                    $documents[] = [
-                        "icon" => url("storage/assets/" . (str_ends_with($coverLetterFilename, '.pdf') ? "pdf-icon.svg" : "docx-icon.svg")),
-                        "title" => $coverLetterFilename,
-                        "file" => url('storage/' . $applied->applied_job->cover_letter),
-                        "uploaded_date" => $applied->applied_job->created_at->format('Y-m-d H:i:s'),
-                    ];
-                }
+            //     if ($applied->applied_job->cover_letter) {
+            //         $documents[] = [
+            //             "icon" => url("storage/assets/" . (str_ends_with($coverLetterFilename, '.pdf') ? "pdf-icon.svg" : "docx-icon.svg")),
+            //             "title" => $coverLetterFilename,
+            //             "file" => url('storage/' . $applied->applied_job->cover_letter),
+            //             "uploaded_date" => $applied->applied_job->created_at->format('Y-m-d H:i:s'),
+            //         ];
+            //     }
 
 
-                return [
-                    'applicant_name' => $applied->user->name,
-                    'job_title' => '',
-                    'applied_job' => $applied->posted_job->job_title,
-                    'date_applied' => $applied->applied_job->created_at->format('d/m/y'),
-                    'status' => $applied->applied_job->status,
-                    'hire_stage' => '',
-                    'applicant_email' => $applied->user->email,
-                    'applicant_phone' => $applied->user->phone_number,
-                    'img_profile' => $applied->user->profile_picture,
-                    'description' => $applied->user->description,
-                    'skills' => $applied->user->skills,
-                    'work_experience' => $applied->user->experience,
-                    'availability_time' => [$applied->applied_job->availability_time_1, $applied->applied_job->availability_time_2],
-                    'notes' => $applied->notes,
-                    'interview_details' =>
-                    [
-                        ['title_head' => 'Interview Date', 'value' => $applied->interview_date],
-                        ['title_head' => 'Interview Type', 'value' => $applied->interview_type],
-                        ['title_head' => 'Interview Location', 'value' => $applied->interview_location],
-                        ['title_head' => 'Interview Status', 'value' => $applied->interview_status],
-                    ],
-                    'assigned_interview' => $applied->assigned_interviewer,
-                    'shortlisted_details' =>
-                    [
-                        ['title_head' => 'Shortlisted Date', 'value' => $applied->shortlisted_date],
-                        ['title_head' => 'Shortlisted By', 'value' => $applied->shortlisted_by],
-                        ['title_head' => 'Shortlisted Status', 'value' => $applied->shortlisted_status],
-                    ],
-                    'assigned_review' => $applied->assigned_review,
-                    'finalstage_details' =>
-                    [
-                        ['title_head' => 'Date Hired', 'value' => $applied->date_hired],
-                        ['title_head' => 'Offer Accepted', 'value' => $applied->offer_accepted],
-                    ],
-                    'finalstage_status' => $applied->offer_status,
-                    'notes' => $applied->notes,
-                    'documents' => $documents,
+            //     return [
+            //         'applicant_name' => $applied->user->name,
+            //         'job_title' => '',
+            //         'applied_job' => $applied->posted_job->job_title,
+            //         'date_applied' => $applied->applied_job->created_at->format('d/m/y'),
+            //         'status' => $applied->applied_job->status,
+            //         'hire_stage' => '',
+            //         'applicant_email' => $applied->user->email,
+            //         'applicant_phone' => $applied->user->phone_number,
+            //         'img_profile' => $applied->user->profile_picture,
+            //         'description' => $applied->user->description,
+            //         'skills' => $applied->user->skills,
+            //         'work_experience' => $applied->user->experience,
+            //         'availability_time' => [$applied->applied_job->availability_time_1, $applied->applied_job->availability_time_2],
+            //         'notes' => $applied->notes,
+            //         'interview_details' =>
+            //         [
+            //             ['title_head' => 'Interview Date', 'value' => $applied->interview_date],
+            //             ['title_head' => 'Interview Type', 'value' => $applied->interview_type],
+            //             ['title_head' => 'Interview Location', 'value' => $applied->interview_location],
+            //             ['title_head' => 'Interview Status', 'value' => $applied->interview_status],
+            //         ],
+            //         'assigned_interview' => $applied->assigned_interviewer,
+            //         'shortlisted_details' =>
+            //         [
+            //             ['title_head' => 'Shortlisted Date', 'value' => $applied->shortlisted_date],
+            //             ['title_head' => 'Shortlisted By', 'value' => $applied->shortlisted_by],
+            //             ['title_head' => 'Shortlisted Status', 'value' => $applied->shortlisted_status],
+            //         ],
+            //         'assigned_review' => $applied->assigned_review,
+            //         'finalstage_details' =>
+            //         [
+            //             ['title_head' => 'Date Hired', 'value' => $applied->date_hired],
+            //             ['title_head' => 'Offer Accepted', 'value' => $applied->offer_accepted],
+            //         ],
+            //         'finalstage_status' => $applied->offer_status,
+            //         'notes' => $applied->notes,
+            //         'documents' => $documents,
+            //     ];
+            // });
+
+
+            $resumeFilename = $appliedDetails->applied_job->resume
+                ? preg_replace('/^\d+_/', '', basename($appliedDetails->applied_job->resume))
+                : null;
+            $coverLetterFilename = $appliedDetails->applied_job->cover_letter
+                ? preg_replace('/^\d+_/', '', basename($appliedDetails->applied_job->cover_letter))
+                : null;
+
+            $documents = [];
+
+            if ($appliedDetails->applied_job->resume) {
+                $documents[] = [
+                    "icon" => url("storage/assets/" . (str_ends_with($resumeFilename, '.pdf') ? "pdf-icon.svg" : "docx-icon.svg")),
+                    "title" => $resumeFilename,
+                    "file" => url('storage/' . $appliedDetails->applied_job->resume),
+                    "uploaded_date" => $appliedDetails->applied_job->created_at->format('Y-m-d H:i:s'),
                 ];
-            });
+            }
 
-            // dd($appliedDetails);
+            if ($appliedDetails->applied_job->cover_letter) {
+                $documents[] = [
+                    "icon" => url("storage/assets/" . (str_ends_with($coverLetterFilename, '.pdf') ? "pdf-icon.svg" : "docx-icon.svg")),
+                    "title" => $coverLetterFilename,
+                    "file" => url('storage/' . $appliedDetails->applied_job->cover_letter),
+                    "uploaded_date" => $appliedDetails->applied_job->created_at->format('Y-m-d H:i:s'),
+                ];
+            }
+
+            $appliedDetailsData = (object) [
+                'applicant_name' => $appliedDetails->user->name,
+                'job_title' => '',
+                'applied_job' => $appliedDetails->posted_job->job_title,
+                'date_applied' => $appliedDetails->applied_job->created_at->format('d/m/y'),
+                'status' => $appliedDetails->applied_job->status,
+                'hire_stage' => '',
+                'applicant_email' => $appliedDetails->user->email,
+                'applicant_phone' => $appliedDetails->user->phone_number,
+                'img_profile' => $appliedDetails->user->profile_picture,
+                'description' => $appliedDetails->user->description,
+                'skills' => $appliedDetails->user->skills,
+                'work_experience' => $appliedDetails->user->experience,
+                'availability_time' => [$appliedDetails->applied_job->availability_time_1, $appliedDetails->applied_job->availability_time_2],
+                'notes' => $appliedDetails->notes,
+                'interview_details' => [
+                    ['title_head' => 'Interview Date', 'value' => $appliedDetails->interview_date],
+                    ['title_head' => 'Interview Type', 'value' => $appliedDetails->interview_type],
+                    ['title_head' => 'Interview Location', 'value' => $appliedDetails->interview_location],
+                    ['title_head' => 'Interview Status', 'value' => $appliedDetails->interview_status],
+                ],
+                'assigned_interview' => $appliedDetails->assigned_interviewer,
+                'shortlisted_details' => [
+                    ['title_head' => 'Shortlisted Date', 'value' => $appliedDetails->shortlisted_date],
+                    ['title_head' => 'Shortlisted By', 'value' => $appliedDetails->shortlisted_by],
+                    ['title_head' => 'Shortlisted Status', 'value' => $appliedDetails->shortlisted_status],
+                ],
+                'assigned_review' => $appliedDetails->assigned_review,
+                'finalstage_details' => [
+                    ['title_head' => 'Date Hired', 'value' => $appliedDetails->date_hired],
+                    ['title_head' => 'Offer Accepted', 'value' => $appliedDetails->offer_accepted],
+                ],
+                'finalstage_status' => $appliedDetails->offer_status,
+                'notes' => $appliedDetails->notes,
+                'documents' => $documents,
+            ];
 
             return response()->json([
                 'status' => 'success',

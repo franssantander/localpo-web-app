@@ -31,11 +31,11 @@ const ShortListed: React.FC<HiringProgressProps> = (props) => {
               </div>
               <div className="grid grid-cols gap-y-1">
                 <h1 className="text-textGray text-xs">Assigned to Review</h1>
-                <Avatar.Group>
+                {/* <Avatar.Group>
                   {assigned_review.map((assign, index: number) => (
                     <Avatar key={index} src={assign.img_profile} />
                   ))}
-                </Avatar.Group>
+                </Avatar.Group> */}
               </div>
               <div>
                 <Button size="xs">Move to next stage</Button>

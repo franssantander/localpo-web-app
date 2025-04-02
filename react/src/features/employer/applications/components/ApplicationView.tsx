@@ -12,7 +12,9 @@ const ApplicationView: React.FC = () => {
 
     const candidateData = applicationsData.find((app) => app.id === Number(id));
 
-    const { data } = useApplicationsView(id);
+    const { viewApplicationData } = useApplicationsView(id);
+
+    console.log("viewApplicationData: ", viewApplicationData);
 
     const items = [
         { title: "Applications", href: "#" },
@@ -30,7 +32,7 @@ const ApplicationView: React.FC = () => {
                 </h1>
                 <Breadcrumbs className="text-blue-500">{items}</Breadcrumbs>
                 <div className="py-14 grid md:grid-cols-[.5fr_1fr] gap-7">
-                    <CardProfile cardProfileData={candidateData} />
+                    <CardProfile cardProfileData={viewApplicationData} />
                     <div>
                         <Card shadow="sm" withBorder>
                             <Card.Section>
@@ -52,7 +54,7 @@ const ApplicationView: React.FC = () => {
                                         pt="xs"
                                     >
                                         <ApplicantProfile
-                                            applicantProfileData={candidateData}
+                                            applicantProfileData={viewApplicationData}
                                         />
                                     </Tabs.Panel>
                                     <Tabs.Panel
@@ -61,7 +63,7 @@ const ApplicationView: React.FC = () => {
                                         pt="xs"
                                     >
                                         <HiringProgressTab
-                                            hiringProgressData={candidateData}
+                                            hiringProgressData={viewApplicationData}
                                         />
                                     </Tabs.Panel>
                                 </Tabs>

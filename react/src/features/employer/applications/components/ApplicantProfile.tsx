@@ -76,7 +76,7 @@ const ApplicantProfile: React.FC<ApplicantProfileProps> = (props) => {
             </div>
             <div className="grid grid-cols gap-y-3">
               <h1 className="font-bold text-textBlack text-md">Experience</h1>
-              <List
+              {/* <List
                 type="unordered"
                 className="list-disc text-textGray grid grid-cols gap-y-4"
                 size="sm"
@@ -102,19 +102,19 @@ const ApplicantProfile: React.FC<ApplicantProfileProps> = (props) => {
                   </h1>
                   <span className="text-xs">June 2023 - May 2024</span>
                 </List.Item>
-              </List>
+              </List> */}
             </div>
             <div className="grid grid-cols gap-y-3">
               <h1 className="font-bold text-textBlack text-md">Skills</h1>
               <div>
-                <List
+                {/* <List
                   className="text-textGray flex items-center gap-x-3 flex-wrap"
                   size="sm"
                 >
                   {skills.map((skill, index: number) => (
                     <List.Item key={index}>{skill}</List.Item>
                   ))}
-                </List>
+                </List> */}
               </div>
             </div>
           </div>
