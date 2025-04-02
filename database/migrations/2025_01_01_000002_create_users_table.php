@@ -20,6 +20,7 @@ return new class extends Migration
             $table->foreignId('company_id')->nullable()->constrained()->onDelete('set null');
             $table->string('profile_picture')->nullable();
             $table->string('name');
+            $table->string('position')->nullable();
             $table->longText('description')->nullable();
             $table->json('skills')->nullable();
             $table->json('experience')->nullable();

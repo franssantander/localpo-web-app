@@ -27,6 +27,8 @@ export const API_ENDPOINTS = {
     GET_APPLIED_JOBS: "/app-jobseeker/get-applied-jobs",
     GET_RECENT_APPLICATION: (perPage: number, currentPage: number) =>
         `/app-dashboard/get-all-recent-application?per_page=${perPage}&page=${currentPage}`,
+    VIEW_APPLICATION: (id: string) =>
+        `/app-applicationsmanagement/view-application?application_id=${id}`,
 };
 
 export const API_PSGC_ENDPOINTS = {

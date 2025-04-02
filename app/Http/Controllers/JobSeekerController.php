@@ -8,6 +8,7 @@ use App\Models\PostedJobs;
 use App\helpers\AuthHelper;
 use Illuminate\Http\Request;
 use App\helpers\ResponseHelper;
+use App\Models\AppliedDetails;
 use App\Models\AppliedJobs;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
@@ -369,7 +370,7 @@ class JobSeekerController extends Controller
                 $coverLetterPath = $coverLetter->storeAs('cover_letters', $coverLetterName, 'public');
             }
 
-            AppliedJobs::create([
+            $appliedJob =  AppliedJobs::create([
                 'user_id' => $user->id,
                 'company_id' => $jobData->company_id,
                 'posted_job_id' => $request->input('posted_job_id'),
@@ -378,6 +379,11 @@ class JobSeekerController extends Controller
                 "contact_number" => $request->input('contact_number'),
                 "availability_time_1" => $request->input('availability_time_1'),
                 "availability_time_2" => $request->input('availability_time_2'),
+            ]);
+
+            AppliedDetails::create([
+                'applied_job_id' => $appliedJob->id,
+                'user_id' => $user->id,
             ]);
 
             DB::commit();

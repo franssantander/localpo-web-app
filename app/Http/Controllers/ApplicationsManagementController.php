@@ -99,7 +99,7 @@ class ApplicationsManagementController extends Controller
                 ], 422);
             }
 
-            $appliedDetails = AppliedDetails::with('applied_job', 'posted_jobs', 'user')
+            $appliedDetails = AppliedDetails::with('applied_job', 'posted_job', 'user')
                 ->where('applied_job_id', $request->application_id)
                 ->get();
 
@@ -111,10 +111,34 @@ class ApplicationsManagementController extends Controller
             }
 
             $appliedDetailsData = $appliedDetails->map(function ($applied) {
+                $resumeFilename = $applied->applied_job->resume ? preg_replace('/^\d+_/', '', basename($applied->applied_job->resume)) : null;
+                $coverLetterFilename = $applied->applied_job->cover_letter ? preg_replace('/^\d+_/', '', basename($applied->applied_job->cover_letter)) : null;
+
+                $documents = [];
+
+                if ($applied->applied_job->resume) {
+                    $documents[] = [
+                        "icon" => url("storage/assets/" . (str_ends_with($resumeFilename, '.pdf') ? "pdf-icon.svg" : "docx-icon.svg")),
+                        "title" => $resumeFilename,
+                        "file" => url('storage/' . $applied->applied_job->resume),
+                        "uploaded_date" => $applied->applied_job->created_at->format('Y-m-d H:i:s'),
+                    ];
+                }
+
+                if ($applied->applied_job->cover_letter) {
+                    $documents[] = [
+                        "icon" => url("storage/assets/" . (str_ends_with($coverLetterFilename, '.pdf') ? "pdf-icon.svg" : "docx-icon.svg")),
+                        "title" => $coverLetterFilename,
+                        "file" => url('storage/' . $applied->applied_job->cover_letter),
+                        "uploaded_date" => $applied->applied_job->created_at->format('Y-m-d H:i:s'),
+                    ];
+                }
+
+
                 return [
                     'applicant_name' => $applied->user->name,
                     'job_title' => '',
-                    'applied_job' => $applied->posted_jobs->job_title,
+                    'applied_job' => $applied->posted_job->job_title,
                     'date_applied' => $applied->applied_job->created_at->format('d/m/y'),
                     'status' => $applied->applied_job->status,
                     'hire_stage' => '',
@@ -148,6 +172,7 @@ class ApplicationsManagementController extends Controller
                     ],
                     'finalstage_status' => $applied->offer_status,
                     'notes' => $applied->notes,
+                    'documents' => $documents,
                 ];
             });
 

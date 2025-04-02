@@ -12,6 +12,7 @@ class AppliedDetails extends Model
     protected $fillable = [
         'applied_job_id',
         'user_id',
+        'hire_status',
         'interview_date',
         'interview_type',
         'interview_location',
@@ -32,8 +33,16 @@ class AppliedDetails extends Model
         return $this->belongsTo(AppliedJobs::class, 'applied_job_id');
     }
 
-    public function posted_jobs(){
-        return $this->belongsTo(PostedJobs::class, 'applied_job_id', 'id');
+    public function posted_job()
+    {
+        return $this->hasOneThrough(
+            PostedJobs::class,
+            AppliedJobs::class,
+            'id',
+            'id',
+            'applied_job_id',
+            'posted_job_id'
+        );
     }
 
     public function user()
